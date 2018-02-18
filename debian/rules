@@ -1,6 +1,8 @@
 #!/usr/bin/make -f
 #export DH_VERBOSE=1
 
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
 CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 CFLAGS += -Wall -g -fPIC -DTESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/
