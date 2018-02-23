@@ -1,3 +1,24 @@
+tesseract (4.00~git2217-44588a3c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 44588a3c7c3756f5ddfcab3dc0a3b6a8471f70be
+  * Date: 1519381675
+  * git changelog:
+  *  44588a3c - add commas to language list
+  *  035325df - Update language list based on tessdata_fast; fix #1343
+  *  6f80c35b - Update appveyor.yml
+  *  0d1365a5 - gle_uncial (#1342)
+  *  ce638c4b - Update appveyor.yml
+  *  9f888f04 - Fix typo in documentation (#1330)
+  *  8130b8d3 - Fix some typos in comments (found by codespell) (#1331)
+  *  638b0258 - Fix CID 1164569 (Dereference after null check) (#1332)
+  *  eb8a6a5c - Fix CID 1164570 (Dereference after null check) (#1333)
+  *  6a58b2e6 - Remove whitespace.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 23 Feb 2018 23:04:37 +0300
+
 tesseract (4.00~git2207-766b7bd6-3) unstable; urgency=medium
 
   * Fix rules https://github.com/AlexanderP/tesseract-debian/pull/1
