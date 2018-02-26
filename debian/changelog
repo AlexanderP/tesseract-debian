@@ -1,3 +1,16 @@
+tesseract (4.00~git2219-40f43111-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 40f43111e05b3dd2f2f8aeae3aba33016523c881
+  * Date: 1519461445
+  * git changelog:
+  *  40f43111 - Add list of scripts to manpage for tesseract (#1347)
+  *  bb89dc35 - Add info regarding LSTM components and options (#1346)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 25 Feb 2018 11:47:05 +0300
+
 tesseract (4.00~git2217-44588a3c-1) unstable; urgency=medium
 
   * Compile
@@ -18,6 +31,12 @@ tesseract (4.00~git2217-44588a3c-1) unstable; urgency=medium
   *  6a58b2e6 - Remove whitespace.
 
  -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 23 Feb 2018 23:04:37 +0300
+
+tesseract (4.00~git2207-766b7bd6-3.1) unstable; urgency=medium
+
+  * Sponsor Alexander Pozdnyakov
+
+ -- Jeff Breidenbach <jab@debian.org>  Tue, 20 Feb 2018 22:58:27 +0300
 
 tesseract (4.00~git2207-766b7bd6-3) unstable; urgency=medium
 
