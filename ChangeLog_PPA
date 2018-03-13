@@ -1,2 +1,3 @@
 disable patch - fix-up-headers
 TESSDATA_PREFIX variable was changed to /usr/share/tesseract-ocr/4.00
+fix patch - man.diff

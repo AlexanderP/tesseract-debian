@@ -1,12 +1,12 @@
 Description: Fixed generation of man page.
 Author: Alexander Pozdnyakov <almipo@mail.ru>
-Last-Update: 2017-08-19
+Last-Update: 2018-03-13
 
---- tesseract-4.00~git2107-6f13d755.orig/doc/Makefile.am
-+++ tesseract-4.00~git2107-6f13d755/doc/Makefile.am
-@@ -8,8 +8,12 @@ man_MANS = cntraining.1  combine_tessdat
- 
- EXTRA_DIST = $(man_MANS) Doxyfile
+--- tesseract-4.00~git2243-47a326b0.orig/doc/Makefile.am
++++ tesseract-4.00~git2243-47a326b0/doc/Makefile.am
+@@ -24,8 +24,12 @@ man_MANS = \
+   
+   EXTRA_DIST = $(man_MANS) Doxyfile
  
 +man_xslt = /usr/share/xml/docbook/stylesheet/docbook-xsl/manpages/docbook.xsl
 +
