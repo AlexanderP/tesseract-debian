@@ -6,3 +6,4 @@ fix "insecure-copyright-format-uri"
 add Version Control System location
 moved installation path for tesstrain.sh
 add shebang to language-specific.sh
+add configure option --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
