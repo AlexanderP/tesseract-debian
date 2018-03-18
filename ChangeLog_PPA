@@ -3,3 +3,4 @@ TESSDATA_PREFIX variable was changed to /usr/share/tesseract-ocr/4.00
 fix patch - man.diff
 Add upstream/metadata
 fix "insecure-copyright-format-uri"
+add Version Control System location
