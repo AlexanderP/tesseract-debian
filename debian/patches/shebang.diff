@@ -1,0 +1,12 @@
+Description: add shebang
+Author: Alexander Pozdnyakov <almipo@mail.ru>
+Last-Update: 2018-03-18
+
+--- tesseract-4.00~git2246-023e1b34.orig/training/language-specific.sh
++++ tesseract-4.00~git2246-023e1b34/training/language-specific.sh
+@@ -1,4 +1,4 @@
+-#
++#!/bin/bash
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
