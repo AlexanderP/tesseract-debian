@@ -4,3 +4,4 @@ fix patch - man.diff
 Add upstream/metadata
 fix "insecure-copyright-format-uri"
 add Version Control System location
+moved installation path for tesstrain.sh
