@@ -1,9 +1,1 @@
-disable patch - fix-up-headers
-TESSDATA_PREFIX variable was changed to /usr/share/tesseract-ocr/4.00
-fix patch - man.diff
-Add upstream/metadata
-fix "insecure-copyright-format-uri"
-add Version Control System location
-moved installation path for tesstrain.sh
-add shebang to language-specific.sh
-add configure option --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) (closes: #841845)
+
