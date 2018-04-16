@@ -1,1 +1,2 @@
-
+Bump Standards-Version to 4.1.4
+set "Multi-Arch: same" to binary packages libtesseract-dev, libtesseract4

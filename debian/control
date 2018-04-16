@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 9), libleptonica-dev (>= 1.72~),
                automake, libtool, libpango1.0-dev, libcairo2-dev, libicu-dev,
                libpng-dev, libjpeg-dev, libtiff-dev, zlib1g-dev, git, autoconf-archive, asciidoc,
                xsltproc, docbook-xsl, docbook-xml
-Standards-Version: 4.1.3
+Standards-Version: 4.1.4
 Homepage: https://github.com/tesseract-ocr/
 Vcs-Git: https://github.com/AlexanderP/tesseract-debian.git
 Vcs-Browser: https://github.com/AlexanderP/tesseract-debian
@@ -25,6 +25,7 @@ Description: Tesseract command line OCR tool
 Package: libtesseract-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libtesseract4 (= ${binary:Version}), ${misc:Depends}, libleptonica-dev
 Replaces: tesseract-ocr-dev (<< 3.0.1-1~)
 Breaks: tesseract-ocr-dev (<< 3.0.1-1~)
@@ -37,6 +38,7 @@ Description: Development files for the tesseract command line OCR tool
 
 Package: libtesseract4
 Section: libs
+Multi-Arch: same
 Breaks: tesseract-ocr (<< 3.01~), ocropus (<< 0.4.0~),
  tesseract-afr (<< 4.00~), tesseract-ara (<< 4.00~), tesseract-aze (<< 4.00~),
  tesseract-bel (<< 4.00~), tesseract-ben (<< 4.00~), tesseract-bul (<< 4.00~),
