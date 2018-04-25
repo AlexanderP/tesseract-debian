@@ -1,9 +1,9 @@
 Description: add shebang
 Author: Alexander Pozdnyakov <almipo@mail.ru>
-Last-Update: 2018-03-18
+Last-Update: 2018-04-25
 
---- tesseract-4.00~git2246-023e1b34.orig/training/language-specific.sh
-+++ tesseract-4.00~git2246-023e1b34/training/language-specific.sh
+--- tesseract-4.00~git2246-023e1b34.orig/src/training/language-specific.sh
++++ tesseract-4.00~git2246-023e1b34/src/training/language-specific.sh
 @@ -1,4 +1,4 @@
 -#
 +#!/bin/bash

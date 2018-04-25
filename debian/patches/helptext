@@ -19,10 +19,10 @@ Origin: vendor, N/A
 Bug: https://github.com/tesseract-ocr/tesseract/issues/707#issuecomment-364159579
 Forwarded: no
 Reviewed-By: Jeff Breidenbach <jab@debian.org>
-Last-Update: <2018-02-20>
+Last-Update: <2018-04-25>
 
---- tesseract-4.00~git2207-766b7bd6.orig/api/tesseractmain.cpp
-+++ tesseract-4.00~git2207-766b7bd6/api/tesseractmain.cpp
+--- tesseract-4.00~git2207-766b7bd6.orig/src/api/tesseractmain.cpp
++++ tesseract-4.00~git2207-766b7bd6/src/api/tesseractmain.cpp
 @@ -128,7 +128,7 @@ static void PrintHelpForPSM() {
  
  static void PrintHelpForOEM() {
