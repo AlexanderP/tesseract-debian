@@ -22,6 +22,10 @@ override_dh_auto_build:
 	make -j$(NUMJOBS)
 	make -j$(NUMJOBS) training
 
+override_dh_install:
+	dh_install
+	cd $(CURDIR)/debian/libtesseract-dev/usr/share/tesseract-ocr/ && chmod +x *.sh
+
 override_dh_auto_install:
 	$(MAKE) DESTDIR=$$(pwd)/debian/tmp prefix=/usr install
 	$(MAKE) DESTDIR=$$(pwd)/debian/tmp prefix=/usr training-install
