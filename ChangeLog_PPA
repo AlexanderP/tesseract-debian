@@ -3,3 +3,4 @@ set "Multi-Arch: same" to binary packages libtesseract-dev, libtesseract4
 fix patch - fix-up-headers, helptext, shebang.diff
 fix libtesseract-dev.install
 set executable flag on sh files
+added simple test
