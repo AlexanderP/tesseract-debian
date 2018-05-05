@@ -1,3 +1,188 @@
+tesseract (4.00~git2439-c3ed6f03-1) unstable; urgency=medium
+
+  * Compile
+  * Bump Standards-Version to 4.1.4
+  * set "Multi-Arch: same" to binary packages libtesseract-dev,
+    libtesseract4
+  * fix patch - fix-up-headers, helptext, shebang.diff
+  * fix libtesseract-dev.install
+  * set executable flag on sh files
+  * added simple test
+  * URL: git://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: c3ed6f036064e54e34f75275f66c70dd924527bf
+  * Date: 1525362324
+  * git changelog:
+  *  c3ed6f03 - Merge pull request #1556 from noahmetzger/winfix
+  *  2193f817 - Fixed CID 1164537 (possible division by zero)
+  *  2645f72c - Merge pull request #1555 from stweil/msvc
+  *  c9b585cf - Don't disable compiler warnings for Visual Studio
+  *  fd5c93e6 - Merge pull request #1554 from stweil/msvc
+  *  f54800f1 - Add /utf-8 for MSVC
+  *  9ae97508 - Merge pull request #1551 from stweil/bigendian
+  *  f53290ac - Merge pull request #1552 from stweil/override
+  *  dc3d28cc - Use more override specifiers
+  *  21d5ce57 - Fix issue with big endian handling
+  *  9c1fe092 - Add assertion to detect wrong endianness handling
+  *  bf9b72c6 - Merge pull request #1546 from noahmetzger/winfix
+  *  a7d1402e - Fixed access to uninitialized variable
+  *  984a9817 - Merge pull request #1540 from stweil/strings
+  *  0efc5286 - Remove unneeded include statements for string /
+    strings.h
+  *  de78ef87 - Merge pull request #1539 from stweil/msvc
+  *  950469e6 - Remove old hack for Visual Studio
+  *  45bb9427 - Merge pull request #1534 from UniQP/override
+  *  938bba3d - Add missing file.
+  *  4ac3063c - Add missing override specifiers
+  *  37d2088d - Merge pull request #1533 from stweil/cov
+  *  fbeb55cd - Fix CID 1164526 (Resource leak in object)
+  *  b87fc523 - Fix CID 1386084 (Uninitialized scalar variable)
+  *  e2135de0 - Fix CID 1385633 (Dereference before null check)
+  *  af72ad77 - Merge pull request #1531 from stweil/cov
+  *  62df5ae6 - java: Fix CID 1386112 (Resource leak)
+  *  63d57099 - java: Make SVWindow more robust (fix three CID issues)
+  *  64e2efff - java: Remove unused field (fix CID 1386094 UrF: Unread
+    field)
+  *  3c269c9a - Merge pull request #1529 from stweil/fix
+  *  a2a12a44 - Fix unittest for autotools configuration after source
+    tree reorganisation
+  *  4f9493c4 - Partial fix for autotools configuration after source
+    tree reorganisation
+  *  d15558b9 - Merge pull request #1528 from stweil/crlf
+  *  dabf3c29 - Fix file endings
+  *  8139ad9f - Merge pull request #1526 from stweil/crlf
+  *  9ceb0c64 - Fix line endings
+  *  104fe793 - Move training to src.
+  *  ca5c15e6 - Set correct rc name.
+  *  cfe15b9d - Remove wrong src dir from configure.
+  *  8ae22b9e - Remove wrong src dir from configure.
+  *  e95ff115 - Move sources into src dir. Update build scripts.
+  *  e8fceb58 - Merge pull request #1523 from stweil/test
+  *  95f39142 - Fix unittest (missing include path)
+  *  79ab597b - Merge pull request #1522 from ic/master
+  *  4ded0d06 - Revert failed attempt to support MacPort's g++
+  *  b6c6cd7a - Merge pull request #1521 from stweil/coverity
+  *  3b69c2bc - Fix CID 1164613 (Uninitialized pointer field)
+  *  d5fb4041 - Merge pull request #1519 from stweil/winfix
+  *  d5226551 - Merge pull request #1518 from amitdo/subdir-objects
+  *  17f29d00 - Fix linker regression for Visual Studio
+  *  c0f9699e - Merge pull request #1514 from stweil/cid
+  *  acbd333c - Merge pull request #1516 from ic/master
+  *  0774069d - Merge pull request #1517 from stweil/ignore
+  *  c3e6083e - Remove 'AUTOMAKE_OPTIONS' from all Makefile.am files
+  *  4df706e7 - Update .gitignore
+  *  54b048fa - Fix wrong environment test that breaks clang++ builds.
+  *  68450d86 - Fix CID 1164709 (Copy into fixed size buffer)
+  *  cb77067f - Fix CID 1164710 (Copy into fixed size buffer)
+  *  d3f6382b - Merge pull request #1512 from stweil/cube
+  *  763b7841 - Merge pull request #1511 from stweil/nullcheck
+  *  e07414f4 - training: Remove some cube relicts
+  *  1b2677a2 - Remove nullptr checks before destructor
+  *  e2ab6997 - Merge pull request #1506 from stweil/version
+  *  577f6f76 - Merge pull request #1507 from stweil/nullptr
+  *  d67df9ee - Merge pull request #1510 from Shreeshrii/Shreeshrii-
+    tesstrain-msg
+  *  86275c21 - Clarify message to indicate additional LSTM training
+    required for 4.0.0
+  *  0f3d33f6 - Change max_pages to zero
+  *  58d95930 - wordrec: Replace NULL by nullptr
+  *  8374e373 - vs2010: Replace NULL by nullptr
+  *  f785d5c0 - viewer: Replace NULL by nullptr
+  *  39cfbd04 - unittest: Replace NULL by nullptr
+  *  5eca9143 - training: Replace NULL by nullptr
+  *  222f5b9d - textord: Replace NULL by nullptr
+  *  6e2750ce - lstm: Replace NULL by nullptr
+  *  16e00b59 - dict: Replace NULL by nullptr
+  *  800b290d - cutil: Replace NULL by nullptr
+  *  72ac460f - classify: Replace NULL by nullptr
+  *  57755a27 - ccutil: Replace NULL by nullptr
+  *  e74d9976 - ccstruct: Replace NULL by nullptr
+  *  5b4ce243 - ccmain: Replace NULL by nullptr
+  *  17e01ee9 - api: Replace NULL by nullptr
+  *  3b3216e8 - Support version names starting with non numeric
+    characters
+  *  6d311cc9 - Merge pull request #1504 from stweil/readme
+  *  8dd56a79 - Merge pull request #1505 from stweil/winfix
+  *  701bac90 - Fix tessdata prefix from executable path for Windows
+  *  e8946f9e - Separate build status badges from other status badges
+  *  4f56abba - Merge pull request #1501 from stweil/cmdline
+  *  d68ab9f1 - training: Support new command line option -v (short form
+    for --version)
+  *  5435c9c7 - Merge pull request #1498 from noahmetzger/winfix
+  *  7dcfd688 - Fixed possible division by zero
+  *  c67a7c6e - Merge pull request #1496 from amitdo/obsolete-autoconf-
+    macros
+  *  822082ee - configure.ac: Remove obsolete macros
+  *  621f9e20 - Merge pull request #1495 from amitdo/autoconf-1.63
+  *  20254ae5 - configure.ac: Update minimum required autoconf version
+    to 2.63
+  *  815bab66 - Merge pull request #1492 from noahmetzger/winfix
+  *  a474fd05 - Merge pull request #1493 from stweil/train
+  *  f95041fa - lstmtraining: Fix handling of --max_iterations
+  *  34efcd40 - Fixed a resource leak detected by Coverity
+  *  21e25d18 - Fixed a memory corruption, detected by Coverity
+  *  36d6cb3a - Merge pull request #1488 from stweil/cmdline
+  *  9e69ecaa - Merge pull request #1484 from noahmetzger/coverity
+  *  8f656e49 - training: Fix dubious parsing of command line
+  *  4b468e11 - improve readability of commit
+    198664fb0b78f03d9741657d77b1fe9a519684ed
+  *  cd0a3e00 - Merge pull request #1486 from amitdo/pango1.22
+  *  002e7a4c - Merge pull request #1487 from amitdo/obsolete-pango-1.18
+  *  88a13646 - Remove obsolete code
+  *  cf7c88dc - configure.ac: Check for the presence of pango 1.22.0 or
+    higher
+  *  808a10f7 - Merge pull request #1483 from noahmetzger/winfix
+  *  67804a2d - Merge pull request #1485 from amitdo/icu52
+  *  98747b37 - configure.ac - check for the present of icu 52.1 or
+    higher
+  *  7ff766c4 - Fixed Resource Leak detected by Coverity
+  *  69c8292d - Merge pull request #1481 from stweil/version
+  *  0998bcf1 - training: Support new argument --version for remaining
+    executables
+  *  a07ee5c4 - Merge pull request #1479 from stweil/version
+  *  9f4f7157 - Merge pull request #1477 from stweil/autotools
+  *  c5e3b203 - Merge pull request #1478 from stweil/typo
+  *  a440bd8b - training: Support new argument --version
+  *  8c3045f1 - Check library version for training executables
+  *  a6fef12b - training: Add 'static' to some local functions
+  *  3f967d2a - training: Remove unused function prototypes
+  *  03b0cb91 - training: Format code
+  *  9612ca4a - Fix compiler errors when including baseapi.h and capi.h
+  *  5e9e22c7 - training: Fix typo in help text
+  *  c89b1129 - configure: Remove optimize option for preprocessor
+  *  147c3dea - Merge pull request #1475 from dschoerk/master
+  *  2bdee5c5 - cmake switch to turn off test building
+  *  da65617d - cmake switch to turn off test building
+  *  d5975707 - Fixed compiler warning
+  *  83f311f0 - Merge pull request #1405 from Shreeshrii/patch-2
+  *  c8694788 - Merge pull request #1406 from Shreeshrii/patch-1
+  *  de48cac8 - Merge pull request #1473 from noahmetzger/winfix
+  *  1d4959c2 - Merge pull request #1474 from
+    ic/build_4.0_macOS_compiler_options
+  *  1642d882 - Remove useless echo statement.
+  *  708f5542 - Add flag to build compiler options with G++ on macOS.
+  *  d88a6b5c - Replace unsecure _splitpath by secure _splitpath_s
+  *  b7b6b28e - Fixed Tessdata directory for Windows
+  *  742a0875 - Merge branch 'master' of github.com-egorpugin:tesseract-
+    ocr/tesseract
+  *  7dd2ecd0 - Move cmake packages detection after compiler settings.
+  *  9e1ecdb9 - Merge pull request #1467 from FernandoGOT/master
+  *  3917a192 - fix for mktemp bug on MAC OS X
+  *  0ddfac85 - Merge pull request #1466 from FernandoGOT/master
+  *  7a5033d1 - added sleep 1 before generate_font_image to fix the
+    problem of not finding fonts
+  *  81821da7 - Merge pull request #1457 from stweil/asciidoc
+  *  09212daf - Merge pull request #1458 from stweil/cov
+  *  ef31eaa7 - Don't try to build manpages if asciidoc is missing
+  *  d9156f2d - WorkingPartSet: Remove unused constructor
+  *  4b50f3f4 - Merge pull request #1455 from stweil/cov
+  *  7cf2e2a4 - Overload method ForwardTimeStep (CID 1385636 Explicit
+    null dereferenced)
+  *  437bf851 - Merge pull request #1454 from stweil/autotools
+  *  f9157fd9 - configure: Don't use AM_MAINTAINER_MODE by default
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 03 May 2018 19:27:06 +0300
+
 tesseract (4.00~git2288-10f4998a-2) unstable; urgency=medium
 
   * Compile
