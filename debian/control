@@ -116,7 +116,7 @@ Depends: ${misc:Depends}, tesseract-ocr,
         tesseract-ocr-bre, tesseract-ocr-chi-sim-vert, tesseract-ocr-chi-tra-vert,
         tesseract-ocr-cos, tesseract-ocr-div, tesseract-ocr-fao, tesseract-ocr-fil,
         tesseract-ocr-fry, tesseract-ocr-gla, tesseract-ocr-hye, tesseract-ocr-jpn-vert,
-        tesseract-ocr-kor-vert, tesseract-ocr-kur-ara, tesseract-ocr-ltz, tesseract-ocr-mon,
+        tesseract-ocr-kor-vert, tesseract-ocr-kmr, tesseract-ocr-ltz, tesseract-ocr-mon,
         tesseract-ocr-mri, tesseract-ocr-oci, tesseract-ocr-que, tesseract-ocr-snd,
         tesseract-ocr-sun, tesseract-ocr-tat, tesseract-ocr-ton, tesseract-ocr-yor,
         tesseract-ocr-script-arab, tesseract-ocr-script-armn, tesseract-ocr-script-beng,
@@ -131,7 +131,7 @@ Depends: ${misc:Depends}, tesseract-ocr,
         tesseract-ocr-script-mymr, tesseract-ocr-script-orya, tesseract-ocr-script-sinh,
         tesseract-ocr-script-syrc, tesseract-ocr-script-taml, tesseract-ocr-script-telu,
         tesseract-ocr-script-thaa, tesseract-ocr-script-thai, tesseract-ocr-script-tibt,
-        tesseract-ocr-script-viet
+        tesseract-ocr-script-viet, tesseract-ocr-grc
 Description: Tesseract OCR with all language and script packages
  This is a metapackage for Tesseract OCR and includes all supported
  languages and scripts.
