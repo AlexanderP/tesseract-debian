@@ -1,3 +1,67 @@
+tesseract (4.00~git2481-555f6ffc-1) unstable; urgency=medium
+
+  * Compile
+  * Added version in tesseract-ocr-eng build-dep (closes: #898971)
+  * URL: git://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 555f6ffc0191fdd481e792be5afacc5644012bb9
+  * Date: 1526933494
+  * git changelog:
+  *  555f6ffc - Merge pull request #1593 from stweil/fix
+  *  cdf035d9 - Fix compilation with g++-5
+  *  0a93ad2a - Merge pull request #1590 from mduk/patch-1
+  *  b4b33dda - Update README.md
+  *  e9197f30 - Merge pull request #1589 from stweil/fix
+  *  fedae914 - ColPartition: Add missing initialisation for
+    median_left, median_right
+  *  7c8ab184 - Merge pull request #1587 from stweil/clean
+  *  c749d461 - Update build rules for Android
+  *  bb34351f - Remove remaining deprecated "register" keyword
+  *  a80a8f17 - Merge pull request #1585 from ZaMaZaN4iK/small_fixes
+  *  6e568b02 - Merge remote-tracking branch 'my_repo/small_fixes' into
+    small_fixes
+  *  6049225d - Merge remote-tracking branch 'my_repo/small_fixes' into
+    small_fixes
+  *  3ce2cab7 - Merge remote-tracking branch 'my_repo/small_fixes' into
+    small_fixes
+  *  d54d7486 - Use std::max/std::min instead of MAX/MIN macros.
+  *  14ae0b87 - Use std::max/std::min instead of MAX/MIN macros.
+  *  c34e145b - Use numeric_limits instead of INT_MAX.
+  *  7d08e117 - Added more const.
+  *  e7e8e201 - Remove deprecated in C++11 'register' keyword (removed
+    since C++17).
+  *  a50b966a - Added more const and one small fix.
+  *  0697235b - Use using instead of typedef. Reason:
+    https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuide
+    lines.md#Rt-using
+  *  0248c7ff - Rename all C-style headers (e.g. <stdio.h>) to C++ style
+    (<cstdio>).
+  *  96f8f853 - Small enhancements (adding const, etc.)
+  *  6f4e1954 - Merge pull request #1581 from Shreeshrii/patch-1
+  *  a9c12334 - Merge pull request #1584 from RNCTX/master
+  *  663b4d2d - Update Makefile.am
+  *  684e8756 - Update Makefile.am
+  *  1b8ab8e4 - Merge pull request #1583 from stweil/warn
+  *  c8f8f636 - TabFind: Change order of initialization code
+  *  6436a696 - BLOCK: Change order of initialization code
+  *  6c08ec02 - Copy .box and .tif files along with .lstmf files from
+    /tmp
+  *  45a65463 - Merge pull request #1569 from noahmetzger/winfix
+  *  43d47f35 - Added downward compatibility for older APIs
+  *  8a7f3a9c - Merge pull request #1568 from amitdo/authors
+  *  af1af22f - Update AUTHORS
+  *  d0570502 - Merge pull request #1567 from stweil/utf8
+  *  932a108b - Revert "fixes #388 by using raw bytes utf8 encoding"
+  *  2236caec - Merge pull request #1563 from Shreeshrii/Shreeshrii-
+    unittest-logging
+  *  07a6e641 - remove non-essential logging function
+  *  8e2344a4 - Merge pull request #1561 from stweil/cid
+  *  7cf7d629 - Fix CID 1390821 (Uninitialized variable)
+  *  7dea6717 - Merge pull request #1557 from stweil/cid
+  *  11609f95 - Fix CID 1386109 (Logically dead code)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 22 May 2018 07:30:43 +0300
+
 tesseract (4.00~git2439-c3ed6f03-2) unstable; urgency=medium
 
   * Added dependency on tesseract-ocr-grc
