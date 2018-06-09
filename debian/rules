@@ -32,7 +32,7 @@ override_dh_auto_install:
 
 override_dh_auto_test:
 	./src/api/tesseract -v
-	./src/api/tesseract ./testing/phototest.tif - -
+	./src/api/tesseract ./test/testing/phototest.tif -
 
 override_dh_auto_clean:
 	dh_auto_clean
