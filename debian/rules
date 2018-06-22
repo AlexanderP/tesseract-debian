@@ -23,8 +23,8 @@ override_dh_auto_build:
 	make -j$(NUMJOBS) training
 
 override_dh_install:
+	cd $(CURDIR)/src/training/ && chmod +x *.sh
 	dh_install
-	cd $(CURDIR)/debian/libtesseract-dev/usr/share/tesseract-ocr/ && chmod +x *.sh
 
 override_dh_auto_install:
 	$(MAKE) DESTDIR=$$(pwd)/debian/tmp prefix=/usr install
@@ -39,6 +39,5 @@ override_dh_auto_clean:
 	dh_clean java/com/Makefile java/com/google/Makefile java/com/google/scrollview/Makefile java/com/google/scrollview/events/Makefile java/com/google/scrollview/ui/Makefile
 
 override_dh_auto_configure:
-	sed "s/AM_MAINTAINER_MODE/AM_MAINTAINER_MODE([enable])/g" -i configure.ac
 	./autogen.sh
 	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --disable-tessdata-prefix --prefix=/usr --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CXXFLAGS="$(CFLAGS)" LDFLAGS="-llept -Wl,-z,defs $(LDFLAGS)"
