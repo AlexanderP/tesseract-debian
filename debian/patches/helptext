@@ -19,12 +19,12 @@ Origin: vendor, N/A
 Bug: https://github.com/tesseract-ocr/tesseract/issues/707#issuecomment-364159579
 Forwarded: no
 Reviewed-By: Jeff Breidenbach <jab@debian.org>
-Last-Update: <2018-04-25>
+Last-Update: <2018-07-08>
 
 --- tesseract-4.00~git2207-766b7bd6.orig/src/api/tesseractmain.cpp
 +++ tesseract-4.00~git2207-766b7bd6/src/api/tesseractmain.cpp
-@@ -128,7 +128,7 @@ static void PrintHelpForPSM() {
- 
+@@ -135,7 +135,7 @@
+ #ifndef DISABLED_LEGACY_ENGINE
  static void PrintHelpForOEM() {
    const char* msg =
 -      "OCR Engine modes:\n"
