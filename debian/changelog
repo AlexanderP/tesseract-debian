@@ -1,9 +1,11 @@
-tesseract (4.00~git2794-ba757a4a-1) unstable; urgency=medium
+tesseract (4.00~git2794-ba757a4a-2) unstable; urgency=medium
 
   * Compile
   * fix patch - man.diff, helptext
   * fixed build with dpkg-buildpackage -A (closes: #901750)
   * fixed path to phototest.tif
+  * Update dependencie for tesseract-ocr, libtesseract4 - add 
+    "liblept5 >= 1.75.3"(closes: #903606)
   * URL: git://github.com/tesseract-ocr/tesseract.git
   * Branch: master
   * Commit: ba757a4a6d8dd3eefaf7780169b8232b2071540b
