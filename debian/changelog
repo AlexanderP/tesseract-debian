@@ -1,3 +1,57 @@
+tesseract (4.00~git2904-07acc2b2-1) unstable; urgency=medium
+
+  * Compile
+  * Bump Standards-Version to 4.2.0
+  * URL: git://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 07acc2b260187eebeb5aed4d063156612560fa24
+  * Date: 1534972118
+  * git changelog:
+  *  b08966ad - Fix assertion caused by access to default TBOX
+  *  7910a766 - Fix CID 1164567 (Dereference after null check)
+  *  f3c7a17d - Fix CID 1395108 (Dereference after null check)
+  *  6092a8f8 - Fix CID 1395109 (Logically dead code)
+  *  ac176630 - Fix CID 1395113 ('Constant' variable guards dead code)
+  *  7e9dfefc - Fix CID 1395114 ('Constant' variable guards dead code)
+  *  99efc13d - Fix CID 1395116 ('Constant' variable guards dead code)
+  *  663be426 - Added the option for character accumulated glyph
+    confidences.
+  *  43e3f24b - add variable  --save_box_tiff to Save box/tiff pairs
+    along with lstmf files.
+  *  debe3da3 - remove duplicate include
+  *  b34cf9d4 - Javanese script training
+  *  e1c387c9 - Fix typo in comments and variable name
+  *  bf333011 - Fix typo in function name
+  *  64123749 - Fix typo in comments and variable name
+  *  95ed924d - Fix typo in function name
+  *  ce135de3 - scrollview: Clean include statements
+  *  296309c1 - remove duplicate include. Fixes #1837
+  *  4cda775d - Revert Makefile.am to beta.2
+  *  7957288f - chamge validate javanese similar to indic
+  *  f93f9e8a - fix typo re Javanese
+  *  0eb7be1c - Initial COmmit to add Aksara Jawa - Javanese script
+  *  6a0f8e8c - ColPartition: Rename median_size_ -> median_height_
+  *  8af80b7b - Fix ImageThresholder::OtsuThresholdRectToPix for OpenCL
+  *  27ce4726 - Fix potential crash with --psm 0 and use osd.traineddata
+    automatically (closes: #906922)
+  *  65997bed - Fix issue detected by Coverity Scan
+  *  d28631a2 - Fix issues detected by Coverity Scan
+  *  6a28cce9 - Fix whitespace issues
+  *  2d96c661 - Fix issue detected by Coverity Scan
+  *  eb69dd02 - TessPDFRenderer: Improve robustness of API (issue #1804)
+  *  d4490af0 - Fix issue reported by Coverity Scan
+  *  83a4eb3b - Fix issue reported by Coverity Scan
+  *  9cf170cb - Revert "Change default width for images output by
+    text2image"
+  *  b19e6908 - training: Add new flag --workspace_dir to
+    tesstraining_utils.sh
+  *  b50073ec - Minor formatting proposals
+  *  2315fe2a - Minor formatting proposals
+  *  91c7504a - Added a feature to enrich the hOCR output with glyph
+    confidences
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 23 Aug 2018 17:56:35 +0300
+
 tesseract (4.00~git2844-607e8fd8-1) unstable; urgency=medium
 
   * Compile
