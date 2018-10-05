@@ -1,22 +1,25 @@
 Description: Fixed generation of man page.
 Author: Alexander Pozdnyakov <almipo@mail.ru>
-Last-Update: 2018-07-08
+Last-Update: 2018-10-05
 
---- tesseract-4.00~git2243-47a326b0.orig/doc/Makefile.am
-+++ tesseract-4.00~git2243-47a326b0/doc/Makefile.am
-@@ -29,10 +29,13 @@
+--- tesseract-4.00~git3057-660dbaa9.orig/doc/Makefile.am
++++ tesseract-4.00~git3057-660dbaa9/doc/Makefile.am
+@@ -29,6 +29,8 @@ man_MANS += \
    unicharset.5
  endif
  
--EXTRA_DIST = $(man_MANS) Doxyfile
 +man_xslt = /usr/share/xml/docbook/stylesheet/docbook-xsl/manpages/docbook.xsl
++
+ EXTRA_DIST = $(man_MANS) Doxyfile
  
--%: %.asc
-+ %: %.asc
- 	$(asciidoc) -o $@ $<
-+	$(asciidoc) $<
-+	$(asciidoc) -b docbook $<
+ .PHONY: html
+@@ -36,7 +38,8 @@ EXTRA_DIST = $(man_MANS) Doxyfile
+ html: $(patsubst %,%.html,$(man_MANS))
+ 
+ %: %.asc
+-	$(asciidoc) -o $@ $<
++	$(asciidoc) -d manpage -b docbook $<
 +	xsltproc $(man_xslt) $@.xml
  
- MAINTAINERCLEANFILES = $(man_MANS) Doxyfile
- 
+ %.html: %.asc
+ 	asciidoc -b html5 -o $@ $<
