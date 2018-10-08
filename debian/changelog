@@ -1,3 +1,181 @@
+tesseract (4.00~git3083-944816ae-1) unstable; urgency=medium
+
+  * Compile
+  * fix patch - man.diff
+  * Bump Standards-Version to 4.2.1
+  * URL: git://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 944816ae3d377cd3015b6d88e3c632bc86096f91
+  * Date: 1538939450
+  * git changelog:
+  *  944816ae - Release candidate 2
+  *  f7945711 - use pdf L_FLATE_ENCODE only for png input; fixes #1961
+  *  67bf9062 - Rework check for readable input file
+  *  4044ba82 - fix "mktemp -d --tmpdir" on Mac OS; see #1453
+  *  685abc91 - pgedit: Change some variables from global to local ones
+  *  424dbd5d - improve description of min_characters_to_try variable
+  *  18f7ab75 - WERD_RES: Remove comparisons which are constant
+  *  238c8727 - GENERIC_2D_ARRAY: Pass parameters by reference
+  *  a7982185 - genericvector: Pass parameters by reference
+  *  819c43d3 - chop: Use more efficient float calculations for sqrt
+  *  f264464e - rect: Use more efficient float calculations for ceil,
+    floor
+  *  b26866bb - intproto: Use more efficient float calculations for
+    floor
+  *  06a8de0b - genericvector: Rewrite code to satisfy static code
+    analyzer
+  *  c2a8aa00 - Fix constructor for class Dict (uninitialized member
+    variables)
+  *  8dc9e9fd - Fix use of wrong UNICHARSET
+  *  0e71e5a7 - lstmtraining: Remove dead code for purified model name
+  *  f4e982e0 - combine_tessdata: Handle failures when extracting
+  *  7434590b - lstmtraining: Check write permission for output model
+  *  660dbaa9 - implement parameter min_characters_to_try for minimum
+    characters to try to skip page entirely. fixes #1729
+  *  33159318 - Merge and enhance documentation on language and script
+    models
+  *  383dcf70 - Document some more config options for tesseract
+  *  b70a4567 - Add Makefile rule to build HTML manpages
+  *  3e9b0acc - Update tesseract man page
+  *  c6f75914 - Don't set page segmentation mode for unlv config
+  *  26bfd2b9 - Allow orientation detection with any traineddata
+  *  ecfee53b - Don't set page segmentation mode for hocr, pdf and tsv
+    configs
+  *  d1600673 - Update README about both OCR engines in tesseract 4
+  *  0c39d344 - Update tesseract man page about both OCR engines in
+    tesseract 4
+  *  1beeeee2 - fix version info in VERSION
+  *  04703ca8 - Fix CID 1164579 (Explicit null dereferenced)
+  *  7dbf5a03 - print help for tesstrain.sh; fixes #1469
+  *  9a1f14f2 - Fix CID 1395882 (Uninitialized scalar variable)
+  *  ce6ff209 - Fix comments
+  *  8c56b8f5 - Move content of ipoints.h to points.h and remove
+    ipoints.h
+  *  57a6f1d2 - remove duplicate help from combine_lang_model
+  *  6ee7f4ea - Fix typo.
+  *  14b83d30 - use tprintf instead of printf to be able disable
+    messages by quiet option (issue #1240)
+  *  d9372662 - add "sudo ldconfig" to install instruction. fixes #1212
+  *  4ec9c862 - unittest: Replace NULL by nullptr
+  *  9e66fb91 - unittest: Format code
+  *  1a096441 - tesseract app: check if input file exists; fixes #1023
+  *  0f3206d5 - Format code (replace ( xxx ) by (xxx))
+  *  63f87cac - Simplify boolean expressions
+  *  abe40f17 - Win32: use the ISO C and C++ conformant name "_putenv"
+    instead of deprecated "putenv"
+  *  a0564fd4 - Allow user to specify dpi for input image
+  *  345e5ee1 - prefer to use FreeType for pango_cairo_font_map
+  *  5fe13907 - remove alpha channel from png: issue #1914
+  *  971fe500 - fixed #714: use binary mode when generating pdf to
+    stdout on Windows
+  *  5dfce747 - fix #1889: part 2
+  *  f69af96d - Only print "Merging rows..." in debug mode
+  *  ea007d5b - fix version info for cmake build
+  *  c003a604 - remove outdated scripts/contrib dir
+  *  01cf7402 - add header guard
+  *  5338a5a8 - Don't trigger a deliberate SIGSEGV for fatal errors in
+    release code
+  *  4ca179d3 - remove condition because fontsize is always > 0
+  *  741ea00d - Don't call exit when parameter in file is unknown
+  *  d586b978 - Remove duplicate include statements
+  *  a387e1f7 - Add documentation for lists of images to the tesseract
+    man page
+  *  d6d6f3d0 - Fix typo in cppan.yml affecting /openmp
+  *  5d22fdfe - replace deprecated C++ headers (reported by clan-tidy) -
+    partially supersedes PR #1605
+  *  c98391d3 - fix #1192 bbox as the entire page
+  *  92e29125 - Fix missing default parameter value cause compile to
+    fail.
+  *  31aeb534 - Fix merge conflicts Merge branch 'master' into
+    jpg_quality_option
+  *  59e42fce - fix issue #1889
+  *  aa47a844 - Add badges for download , licence and lgtm
+  *  be1393b1 - Replace macro MINGW by __MINGW32__
+  *  4fa2a345 - EquationDetectBase: Define virtual destructor in .cpp
+    file
+  *  f29a9496 - BlobGrid: Define virtual destructor in .cpp file
+  *  b3206d94 - GridBase: Define virtual destructor in .cpp file
+  *  677198e3 - AlignedBlob: Define virtual destructor in .cpp file
+  *  c9d8e5e8 - TransposedArray: Define virtual destructor in .cpp file
+  *  94d227bc - IndexMapBiDi: Define virtual destructor in .cpp file
+  *  319de308 - Add missing include file (fixes linker error for Visual
+    Studio)
+  *  5178142a - NthItemTest: Add definition for virtual destructor
+  *  80c1235c - HeapTest: Add definition for virtual destructor
+  *  46d2273e - IcuErrorCode: Define virtual destructor in .cpp file
+  *  68bcd6ba - Validator: Define virtual destructor in .cpp file
+  *  0d211f9e - Dawg: Define virtual destructor in .cpp file
+  *  ac8afc57 - CUtil: Define virtual destructor in .cpp file
+  *  32098b7d - IndexMap: Define virtual destructor in .cpp file
+  *  5b8162f0 - CCUtil: Define virtual destructor in .cpp file
+  *  14c23c9f - MATRIX: Define virtual destructor in .cpp file
+  *  bde8f080 - CCStruct: Define virtual destructor in .cpp file
+  *  8317371f - LTRResultIterator
+  *  b612c2c5 - SVEventHandler
+  *  1c9bd51d - SVEventHandler: Define virtual destructor in .cpp file
+  *  8e551469 - MutableIterator: Define virtual destructor in .cpp file
+  *  d926655c - LTRResultIterator: Define virtual destructor in .cpp
+    file
+  *  c635cdf5 - Do not define or use macro __UNIX__
+  *  be443a5d - add langtests for Devanagari and Sanskrit
+  *  9f8ed31a - api/pdfrenderer.cpp: Fix compiler warning
+  *  08e25d41 - textord/cjkpitch: Fix mismatch between format string and
+    argument
+  *  2cc7839a - textord/makerow.cpp: Fix compiler warnings
+  *  e74c88a4 - ccstruct/werd.cpp: Fix compiler warnings
+  *  4934b2e8 - ccstruct/polyblk.cpp: Fix compiler warnings
+  *  4f32b8fd - ccstruct/ocrblock.cpp: Fix compiler warnings
+  *  59b637ef - ccstruct/mod128.cpp: Fix compiler warnings
+  *  31de2cf6 - Add newline at end of file
+  *  ccbda7a2 - Stage packages that provides the depending libraries
+  *  2a61f6df - Fix compiler warnings in c_blob_comparator and make it a
+    local function
+  *  9c8a5851 - Add git tracking ignore rules for snap packaging
+  *  aa48247f - Assert removable-media interface in the snap
+  *  b5ff354d - Split app. command arguments into separate lines
+  *  5ea8bf64 - Flip snap packaging's grade to stable
+  *  554450c9 - Use automatic git-based versioning for the snap
+  *  69a111a7 - Clean use of qsort function sort_floats
+  *  92922b42 - Add langtests framework with frk example
+  *  a849860c - add prime test programs to gitignore
+  *  4aaad7b7 - add /unittest/*_test to gitignore
+  *  b5d41b77 - Add leptonica-libs for apply-boxes test
+  *  85b03723 - DISABLE some tests by default since they take long to
+    run. They can be forced to run by --gtest_also_run_disabled_tests
+    argument
+  *  46f65bf0 - unittest: Fix and enable applybox_test
+  *  70daecf2 - Javanese Validation works now - for the most part
+  *  3e8e338c - taking as kCOnsonant in validate_grapheme
+  *  a6c6b34b - Workaround for Javanese Aksara's Taling, do not label it
+    as a combiner
+  *  c1af1f66 - unittest: Fix and enable commandlineflags_test
+  *  ca7ae1c3 - unittest: Fix and enable validator_test
+  *  f7663c69 - Added detailed value description for glyph_confidences
+    parameter
+  *  70665721 - unittest: Fix and enable tfile_test
+  *  8e404679 - unittest: Fix and enable tabvector_test
+  *  aac00836 - unittest: Fix and enable tablerecog_test
+  *  7aef7a30 - unittest: Fix and enable tablefind_test
+  *  f95725af - unittest: Fix and enable stats_test
+  *  6df28fb3 - unittest: Fix and enable rect_test
+  *  3d38e8ce - unittest: Fix and enable nthitem_test
+  *  f876ddb0 - unittest: Fix and enable linlsq_test
+  *  aec9ce77 - unittest: Fix and enable intfeaturemap_test
+  *  c4eda838 - unittest: Fix and enable indexmapbidi_test
+  *  de7676c8 - unittest: Fix and enable heap_test
+  *  77809283 - Add ARRAYSIZE macro for Google test environment
+  *  2dc0b681 - unittest: Fix and enable denorm_test
+  *  bb101def - unittest: Fix and enable colpartition_test
+  *  68db6aa5 - unittest: Fix and enable cleanapi_test
+  *  0dc5c8ef - unittest: Fix and enable bitvector_test
+  *  2b7df591 - Add more unittests from Google
+  *  f0337c2d - Add more portability hacks for Google test environment
+  *  7a2f8d90 - Move class tesseract::File from training to ccutil
+  *  f24426cd - Convert CRLF line endings to LF
+  *  63965bd7 - Fix new whitespace issues
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 07 Oct 2018 22:24:26 +0300
+
 tesseract (4.00~git2904-07acc2b2-1) unstable; urgency=medium
 
   * Compile
