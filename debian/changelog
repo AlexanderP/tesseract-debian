@@ -1,13 +1,67 @@
-tesseract (4.00~git3083-944816ae-1) unstable; urgency=medium
+tesseract (4.00~git3153-d6950eb2-1) unstable; urgency=medium
 
   * Compile
   * fix patch - man.diff
   * Bump Standards-Version to 4.2.1
   * URL: git://github.com/tesseract-ocr/tesseract.git
   * Branch: master
-  * Commit: 944816ae3d377cd3015b6d88e3c632bc86096f91
-  * Date: 1538939450
+  * Commit: d6950eb21c47566dbec4593e934e56f7fca106f8
+  * Date: 1539538750
   * git changelog:
+  *  d6950eb2 - Release candidate 3
+  *  10f2c45c - fix "mkdir -dt" for bds, mac and cygwin
+  *  126ca805 - Do not build tests by default.
+  *  14af3f72 - Add missing cerrno includes - fixes #1986
+  *  6cee0528 - turn off cmake test building
+  *  6ffb53f8 - win32: Show TIFF errors on console
+  *  f5dfab15 - Add Leptonica lib for baseapi_test
+  *  47343174 - fixes #408 - text2image: comma in font name
+  *  5f4f9372 - revert debug message committed by mistake
+  *  f6fd9b3a - Handle null raw_choice - fixes #235, fixes #246
+  *  90403ef3 - update dist-hook
+  *  b0b5bd62 - build doc only for tesseract engine
+  *  6359ba2e - add cmake files to autotools distribution package
+  *  4edcbf11 - adapt info about ScrollView.jar build
+  *  3f5c3619 - unittest: Disable build rules for tests which still fail
+    to build
+  *  2916dc86 - unittest: Add mastertrainer_test (only works partially)
+  *  f93fb9de - unittest: Add lang_model_test (only works partially)
+  *  de6a7597 - unittest: Add paragraphs_test
+  *  53f0e765 - unittest: Add imagedata_test
+  *  d86d520f - Remove tab character in source files
+  *  d59f14c7 - Remove gradechop.h
+  *  420a0286 - unittest: Add fileio_test
+  *  d3cf4237 - unittest: Add qrsequence_test
+  *  11f82f5c - unittest: Add baseapi_test
+  *  db16fea6 - Add a basic implementation of class CycleTimer
+  *  27bfaccf - Enhance LOG emulation
+  *  db07a69b - Add more hacks for use with Google unittests
+  *  b65b4afe - Update test submodule
+  *  3318c9aa - Add Abseil as a submodule (needed for some of the new
+    unit tests)
+  *  9d84968d - fix building of ScrollView.jar with modern java version;
+    fixes #1289
+  *  6e759243 - remove not existing directory from autotools
+    distribution
+  *  b7098b3a - remove insight.io badge
+  *  488cc49a - Use env variable in AppVeyor configuration
+  *  7f911ac5 - Fix integer overflow in overlap calculation
+  *  ca5d285a - hocr: add ocrp_wconf to unconditional ocr-capabilities;
+    fixes #1470
+  *  956525f5 - fix uninitialized variable, remove unused variable
+  *  128422e7 - Remove virtual specifiers
+  *  f94b3fd9 - Remove code for _MSC_VER < 1900
+  *  c375f4fb - keep API compatibility with #1265
+  *  af02ac64 - Update googletest submodule to release v1.8.1
+  *  eba1c81d - Update test submodule
+  *  dcd0377b - Always use isascii() with isspace()
+  *  32e92def - Avoid crash with --psm 0 and LSTM traineddata
+  *  1eeca175 - SVPaint: Remove empty block
+  *  9c857ab9 - Classify: Don't hide debug parameter
+  *  30b75cfc - UNICHARMAP: Remove comparison which is always false
+  *  3ae765ec - svpaint: Change a variable from global to local
+  *  7b595592 - pgedit: remove unused declaration of display_bln_lines
+  *  ae93b65b - Plumbing: Remove comparison which is always false
   *  944816ae - Release candidate 2
   *  f7945711 - use pdf L_FLATE_ENCODE only for png input; fixes #1961
   *  67bf9062 - Rework check for readable input file
@@ -174,7 +228,7 @@ tesseract (4.00~git3083-944816ae-1) unstable; urgency=medium
   *  f24426cd - Convert CRLF line endings to LF
   *  63965bd7 - Fix new whitespace issues
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 07 Oct 2018 22:24:26 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 14 Oct 2018 22:04:32 +0300
 
 tesseract (4.00~git2904-07acc2b2-1) unstable; urgency=medium
 
