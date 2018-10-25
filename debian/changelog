@@ -1,13 +1,87 @@
-tesseract (4.00~git3153-d6950eb2-1) unstable; urgency=medium
+tesseract (4.00~git3241-1066f696-1) unstable; urgency=medium
 
   * Compile
   * fix patch - man.diff
   * Bump Standards-Version to 4.2.1
+  * disable patch - shebang.diff
   * URL: git://github.com/tesseract-ocr/tesseract.git
   * Branch: master
-  * Commit: d6950eb21c47566dbec4593e934e56f7fca106f8
-  * Date: 1539538750
+  * Commit: 1066f696dd1439c61ec04ea341666439a97f49a5
+  * Date: 1540363862
   * git changelog:
+  *  1066f696 - Release candidate 4
+  *  eefb8348 - Fix compiler warning
+  *  f7f5f410 - Fixed a mac compiler warning in recodebeam.cpp
+  *  e60318f9 - set PANGOCAIRO_BACKEND=fc to avoid crash; fixes #736
+  *  3d508a65 - set unlv_tilde_crunching to false; fixes #1449 #948
+  *  7ebbb737 - ColPartition: Fix CID 1164543 (Division or modulo by
+    float zero)
+  *  eaabe4a3 - ErrorCounter: Fix CID 1164538 (Division or modulo by
+    float zero)
+  *  8f615d44 - osdetect: Fix CID 1164539 (Division or modulo by float
+    zero)
+  *  be0cf037 - tesseractmain: Fix memory leak
+  *  9c079931 - Add parenthesis in boolean expression
+  *  0f973e1d - Add missing 'static' keyword
+  *  a71ad455 - Remove unused macros
+  *  eac2880c - avoid unbound variable TESSDATA_PREFIX
+  *  d75ef80f - Get sorted list of available languages
+  *  95d9c8c5 - set default values for unset variables
+  *  7b32e645 - add shebang
+  *  aefcbac8 - add info about unicharambigs file v2; fixes #165
+  *  32c1e4f4 - FLAGS_webtext_prefix: unbound variable; issue #2005
+  *  34a89e54 - Fix function ScrollViewCommand
+  *  4d3b0bc7 - use <cstdio> instead of <stdio.h>
+  *  8103d17c - use _strdup instead of strdup in MSVC
+  *  a033261f - add info about used backend in text2image
+  *  e2321140 - Fix use of undefined macro USE_DEVICE_SELECTION
+  *  48694068 - Exit training script if run command failed; fixes #2005
+  *  1a523006 - install training script with autotools.
+  *  b0ace0e8 - ScrollView: Optimize local table_colors
+  *  d364750c - Remove type cast and fix compiler warning (-Wcast-qual)
+  *  1b2bda65 - Revert "prefer to use FreeType for pango_cairo_font_map"
+  *  276c6845 - Revert "free PangoFontMap; fixes #1999"
+  *  ebbd4e3e - fixes #426; define NOUNDEFINED for cygwin
+  *  b40151c2 - training: Don't hide global variables
+  *  bb181ec8 - Rename API function from GetBestLSTMChoices to
+    GetBestLSTMSymbolChoices
+  *  df7d1e1f - Rename API function for getting LSTM choices
+  *  0a42c0dd - Fix configuration for LGTM
+  *  830b9c71 - BLOBNBOX: Declare signed bit field
+  *  d9c472b9 - cluster: Fix some potential overflows
+  *  d1d73b98 - free PangoFontMap; fixes #1999
+  *  849c2e98 - Add configuration for LGTM
+  *  b2abfc1e - Update test submodule
+  *  49d7df6d - tesseractmain: Show error message when output file could
+    not be created
+  *  b0b8dfbc - TessResultRenderer: Extend API to access status of
+    renderer
+  *  d04133f0 - unittest: Add more files from Google
+  *  f0c9b753 - BlamerBundle: Add declaration for copy assignment
+    operator
+  *  e3658bbc - C_OUTLINE_FRAG: Add declaration for copy constructor
+  *  5585ed8d - ROW: Add declaration for copy constructor
+  *  a1f0c66b - BLOB_CHOICE: Add copy assignment operator
+  *  7100a146 - ParamsTrainingHypothesis: Add copy assignment operator
+  *  0bbd5c5d - LineHypothesis: Add copy assignment operator
+  *  c13371d6 - Renamed GetGlyphConfidences() to GetChoices() and
+    glyph_confidences to lstm_choice_mode
+  *  4b800cca - Fix sum computation in higher precision
+  *  fd84f7b6 - LLSQ: Replace sqrt by std::sqrt
+  *  7c2af457 - Fix sum computation in higher precision
+  *  1730b8cc - classify/cluster: Replace Emalloc by std::vector
+  *  5fb461a5 - SVNetwork: Handle failed socket call (CID 1164597)
+  *  2d2b269e - OpenclDevice: Catch negative index (CID 1395110)
+  *  98843e0d - Fix uninitialized scalar variable (CID 1395880)
+  *  146d2caa - Classify: Fix new resource leak (CID 1396163)
+  *  edbd07a5 - lstmtraining: Handle failed remove syscall (CID 1396166)
+  *  d8fdbdb9 - CycleTimer: Add missing initialization (CID 1396168)
+  *  32e1e4b6 - TessPDFRenderer: Remove unused member variable
+    jpg_quality_ (CID 1396172)
+  *  d89ec155 - Revert "Fix CID 1396172 (Uninitialized members)"
+  *  cbd09de7 - Fix CID 1396172 (Uninitialized members)
+  *  d0d73da6 - commontraining: Fix two comments
+  *  4b9e0a82 - Fix cppan build.
   *  d6950eb2 - Release candidate 3
   *  10f2c45c - fix "mkdir -dt" for bds, mac and cygwin
   *  126ca805 - Do not build tests by default.
@@ -16,7 +90,7 @@ tesseract (4.00~git3153-d6950eb2-1) unstable; urgency=medium
   *  6ffb53f8 - win32: Show TIFF errors on console
   *  f5dfab15 - Add Leptonica lib for baseapi_test
   *  47343174 - fixes #408 - text2image: comma in font name
-  *  5f4f9372 - revert debug message committed by mistake
+  *  5f4f9372 - revert debug message commited by mistake
   *  f6fd9b3a - Handle null raw_choice - fixes #235, fixes #246
   *  90403ef3 - update dist-hook
   *  b0b5bd62 - build doc only for tesseract engine
@@ -228,7 +302,7 @@ tesseract (4.00~git3153-d6950eb2-1) unstable; urgency=medium
   *  f24426cd - Convert CRLF line endings to LF
   *  63965bd7 - Fix new whitespace issues
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 14 Oct 2018 22:04:32 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 24 Oct 2018 21:41:11 +0300
 
 tesseract (4.00~git2904-07acc2b2-1) unstable; urgency=medium
 
