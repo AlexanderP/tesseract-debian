@@ -1,7 +1,7 @@
 tesseract (4.0.0-1) unstable; urgency=medium
 
   * New upstream release.
-  * moved sh scripts to usr/share/tesseract-ocr/
+  * moved sh scripts to usr/share/tesseract-ocr/ (closes: #913017)
   * URL: git://github.com/tesseract-ocr/tesseract.git
   * Branch: master
   * Commit: 51316994ccae0b48692d547030f26c0969308214
@@ -12,7 +12,7 @@ tesseract (4.0.0-1) unstable; urgency=medium
     process
   *  125fdc3f - Add debug configuration for LSTM
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 29 Oct 2018 19:51:59 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 06 Nov 2018 19:51:59 +0300
 
 tesseract (4.00~git3241-1066f696-1) unstable; urgency=medium
 
