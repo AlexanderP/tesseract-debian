@@ -32,8 +32,10 @@ override_dh_auto_install:
 	$(MAKE) DESTDIR=$$(pwd)/debian/tmp prefix=/usr training-install
 
 override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	./src/api/tesseract -v
 	./src/api/tesseract ./test/testing/phototest.tif -
+endif
 
 override_dh_auto_clean:
 	dh_auto_clean

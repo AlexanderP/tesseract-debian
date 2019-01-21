@@ -1,3 +1,10 @@
+tesseract (4.0.0-2) unstable; urgency=medium
+
+  * Honour DEB_BUILD_OPTIONS=nocheck. (Closes: #919810)
+  * Bump Standards-Version to 4.3.0
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 21 Jan 2019 19:40:07 +0300
+
 tesseract (4.0.0-1) unstable; urgency=medium
 
   * New upstream release.
