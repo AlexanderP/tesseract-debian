@@ -1,3 +1,757 @@
+tesseract (4.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * disable patch - man.diff
+  * URL: git://github.com/tesseract-ocr/tesseract.git
+  * Branch: 4.1
+  * Commit: 5280bbcade4e2dec5eef439a6e189504c2eadcd9
+  * Date: 1562502848
+  * git changelog:
+  *  5280bbca - 4.1.0 Release
+  *  22fb70cb - Fix handling of single pages from multipage TIFF files
+    (issue #2537)
+  *  08ca7b84 - Fix linker error with disabled legacy engine (issue
+    #2532)
+  *  48641b07 - Remove outdated build information for Android
+  *  e53e1050 - genericvector: Remove redundant declarations
+  *  f4698154 - Revert "Replace callback by direct function calls in
+    TessBaseAPI::GetComponentImages"
+  *  792b39d5 - Revert "Move LSTMTrainer from libtesseract to
+    libtesseract_training"
+  *  c310fef8 - Fix crash in Tesseract::classify_word_and_language()
+    when tessedit_timing_debug is enabled
+  *  d8494f32 - Revert "Simplify indirect call of
+    LMPainPoints::GeneratePainPoint"
+  *  1d5a320d - Revert "Simplify class LSTMTrainer"
+  *  10f5bffa - decrease reuired version of cmake to build as 3.6 is
+    still in use. Side effect no support for c++17 in CXX_STANDARD
+  *  6157b8b5 - update Changelog (main 4.1 changes)
+  *  1a205b8b - cmake: Fix build with OpenMP (issue #2462)
+  *  3dff32e4 - Fix check for icu 52.1 or newer
+  *  4535e460 - Update enum from unicode/uchar.h
+  *  4b03d13f - unittest: Fix function QCHECK (issue #2517)
+  *  afb36b35 - Add VS2019
+  *  20a0c614 - Fix format string for 64 bit integer
+  *  daac30e6 - baseapi: Remove old code
+  *  1ce4c2f8 - Replace code using _splitpath_s (win32)
+  *  1a279d11 - Remove outdated comment
+  *  dc2dada0 - Remove dummy code from
+    LSTMTrainer::InitTensorFlowNetwork
+  *  7b589622 - Simplify unittest/Makefile.am
+  *  f44be2e8 - cmake: Build training tools also on Linux and macOS
+  *  c967f892 - Add package libpango1.0-dev to Travis configuration
+  *  a30d4333 - Move LSTMTrainer from libtesseract to
+    libtesseract_training
+  *  1a44ce31 - Replace callback by direct function calls in
+    TessBaseAPI::GetComponentImages
+  *  563a1717 - Simplify class LSTMTrainer
+  *  c5525c44 - Remove wrong description for
+    GenericVector::set_compare_callback and simplify code
+  *  6a0fc4f8 - Simplify indirect call of
+    LMPainPoints::GeneratePainPoint
+  *  c614907e - tesstrain_utils.sh: remove redundant code
+  *  6a39b81d - tesscallback: Remove more unused code
+  *  3cdafa0f - 4.1.0 Release candidate 4
+  *  d7d05000 - Remove code for embedded build
+  *  4d5eb6d3 - Remove old and misguiding build steps on windows.
+  *  2f51af0f - ocrfeatures: Remove locally used functions from global
+    interface
+  *  9491538f - unittest: Add missing Leptonica library for
+    textlineprojection_test
+  *  9a5f7247 - Replace TessBaseAPI::CatchSignals by a dummy function
+  *  cf512d38 - 4.1.0-rc3 => VERSION
+  *  71608886 - Revert "Integrated Timesteps per symbol into
+    ChoiceIterator"
+  *  78ced35a - restore CatchSignals to fix API compatibility
+  *  c5105c53 - fix build
+  *  4d3455e1 - Integrated Timesteps per symbol into ChoiceIterator
+  *  9897bc9c - cmake: backport master changes
+  *  5d23dfa5 - create OUTPUT_DIR did not exist; fixes #2497
+  *  153b921c - unittest: Catch missing eng.traineddata in baseapi_test
+  *  ce82facc - unittest: Fix and enable normstrngs_test
+  *  c01b3229 - unittest: Fix and enable textlineprojection_test
+  *  bb2ea347 - unittest: Fix and enable scanutils_test
+  *  3729b7b3 - Allow saving of box/tiff pairs during base tesseract
+    training
+  *  dfcdfe56 - Allow saving of box/tiff pairs during base tesseract
+    training
+  *  706a2330 - Allow saving of box/tiff pairs during base tesseract
+    training
+  *  35b88262 - unittest: Fix and enable ligature_table_test
+  *  15da5c12 - [sw] Remove inexistent include dirs.
+  *  5b32be82 - [sw] Exclude missing include dir.
+  *  f9da14ec - Update appveyor.yml
+  *  b6f9ab66 - Update sw script.
+  *  249acaed - cmake: using c++ standard for g++
+  *  2f6f77bb - Revert "Do not hardcode c++11 for unix builds"
+  *  796129ea - Fix OpenMP builds on Unix
+  *  9fcef36b - Do not hardcode c++11 for unix builds
+  *  911a9916 - Detect and use C++17 support for CMake builds
+  *  8204ca08 - Add dot product implementation using std::inner_product
+  *  d33ced19 - Use C++17 compiler if possible
+  *  26f41261 - Update documentation for unicharset_extractor
+  *  ff45801d - fix packaging appveyor artifacts
+  *  6e7dcc12 - Fix crash in PreloadRenderers with nullptr outputbase
+  *  b0e0e27a - Fix build for unittests
+  *  90b12b3a - scanedg: Add const attributes
+  *  fdb3f58c - unittest: Remove unused methods
+  *  9b9d4bf0 - Remove EXTERN macro
+  *  927d1b8f - Remove unused macros
+  *  831a3e61 - configure: Fix cross builds (check for TensorFlow
+    header)
+  *  337a467d - Fix compiler errors for old gcc
+  *  4712a5eb - Remove some unused functions, constants and variables
+  *  38f34862 - training: Add missing static attributes
+  *  66e56891 - training: Move declarations from cpp files to h file
+  *  6dfb049c - featdefs: Add missing include statement
+  *  b4a7f51c - Add missing static attributes
+  *  7f32cb65 - bits16: Modernize code
+  *  d809200b - Do not link librt on OpenBSD
+  *  2160ebfd - unicodes: Optimize code by using constexpr and removing
+    unused globals
+  *  cb6cf802 - featdefs: Optimize code by using constexpr
+  *  a4e13782 - Fix broken build for Leptonica < 1.77
+  *  9e23dc28 - Remove classify/cutoffs.h
+  *  8b875c00 - fix '--enable-visibility' build
+  *  516ada66 - cmake: respect -DTESSDATA_PREFIX=/path (on linux)
+  *  227452f8 - Replace Tensorflow by TensorFlow
+  *  34311b36 - Fix linking of unittest with Tensorflow
+  *  6c68f084 - Implement check for Tensorflow header file
+  *  bed08909 - Remove "third_party/" in comments and update path names
+  *  b7537e94 - Support build with Tensorflow
+  *  39c80095 - cmake: fix tiff linking to executable if tiffio.h is
+    found
+  *  e27a07e0 - fix missing tiff format
+  *  0d824a60 - lstmtrainer: Set constant kLearningRateDecay at compile
+    time
+  *  c2e45cff - Update normstrngs_test.cc
+  *  cd49b61c - Fix Thai valid text and add Thai illegal sequences
+  *  40216e5a - Fix bug in max_max_dist
+  *  a324c885 - Fix LGTM and revert bugfix for later PR
+  *  5f084891 - Fix syntax error
+  *  26f05b11 - Remove SavePixForCrash and related code
+  *  7b4b3301 - tprintf: Make code reentrant and use less memory
+  *  ecd0384a - configure: Use a hopefully more robust way to fix
+    AX_CHECK_COMPILE_FLAG
+  *  19274eeb - Some LGTM fixes and potential bugfixes
+  *  0190f398 - Remove local definition of M_PI
+  *  0c70c2a6 - configure: Fix for clang++-8 and newer
+  *  2b75680e - Fix compiler warnings
+  *  caee962d - Fix text2image compilation on C++17 compilers
+  *  fe06d3a0 - Update VERSION
+  *  3452c8eb - Fix out-of-bounds writes in Classify::ReadNewCutoffs
+  *  4763f24c - stringrenderer_test: Get system locale only once
+  *  26c29494 - Update abseil submodule to HEAD
+  *  d81f6a07 - oldlist: Fix comments
+  *  d0a43101 - Remove space at line endings
+  *  403cf31e - Replace CR-LF line endings by LF
+  *  28940481 - Remove space at line endings
+  *  c0c53c78 - Add different classes to hocr output depending on
+    BlockType
+  *  8887cad1 - Run more unittests with the user's locale
+  *  ce6b0c02 - Fix more build error for compilation without legacy
+    engine
+  *  80ba28ef - Fix linker error for baseapi_test when building without
+    legacy engine
+  *  96f6fc28 - Remove assertions for unsupported locale settings
+  *  fb926243 - Fix UNICHARSET::save_to_string for locale de_DE.UTF-8
+  *  728f5d93 - Fix baseapi_test with locale de_DE.UTF-8
+  *  c2444e75 - Fix apiexample_test with locale de_DE.UTF-8
+  *  ab695f88 - configure: Fix for latest developer tools on macOS
+  *  bf744711 - Fix Doxygen comments for void functions
+  *  9bc576fa - normmatch: Remove unused private function
+  *  6ed503bf - Update sw build.
+  *  25f2e0cb - Replace sscanf by std::istringstream
+  *  8cc75113 - Fix reading of parameter from traineddata normproto
+    component
+  *  73a08678 - Fix Doxygen comment
+  *  70ffe339 - Fix cast from pointer to integer type
+  *  a14ae450 - cmake: uninstall target
+  *  ee024e02 - cmake: fix build without pkg-config (issue #2424)
+  *  5320320b - autotools: remove list of traineddata files
+  *  8ef392cb - Fix CPPFLAGS configuration for icu4c and libarchive
+    missing from configure.ac
+  *  57bf215d - ScrollView: remove custom implementation of GetAddrInfo
+  *  9cd60b2b - remove unused include
+  *  98be949f - tesscallback: Remove more unused code
+  *  3ae40694 - tesscallback: Remove unused code
+  *  c4bb4b93 - correct tessdata comment in baseapi.h
+  *  78ed5ef8 - universalambigs: Add missing include file
+  *  a8c8a961 - commandlineflags: Replace strtod by std::stringstream
+  *  8831cbfe - paramsd: Replace strtod by std::stringstream
+  *  231da006 - clusttool: Replace strtof by std::stringstream
+  *  97f6711c - clusttool: Remove unused code and some global functions
+  *  1d14d159 - Fix some typos (most found and fixed by codespell)
+  *  ef33a06e - fix crash in case of missing PNG support in Leptonica
+    see #2333
+  *  b2fc3eba - fix documentation about datapath: ending "/" is not
+    relevant
+  *  52205ab4 - cmake: fix linux build
+  *  f70859f1 - fix #1900: intraword spacing for slightly better pdf
+    copy-paste performance
+  *  2746566e - Print info when uzn file is used.
+  *  d5f23a61 - cmake: fixes #2337 Android cross-build
+  *  0d132e40 - fix spelling
+  *  9132bc73 - remove unused variable
+  *  c1f70e27 - Fix build for Windows
+  *  cd2ff227 - cmake: remove host.h from installation, remove
+    definition of NOMINMAX and report used C++ standard
+  *  9587e170 - svutil.cpp: fix windows build
+  *  315bd3a9 - Only include windows.h using host.h
+  *  668f59f3 - Clean macros in platform.h
+  *  b7e31221 - svutil: Clean include file
+  *  c7744710 - Remove host.h from Tesseract API
+  *  57604ec5 - Fix Windows build
+  *  53dd6ca0 - Fix typo in description
+  *  6aa887d6 - fix the coordinates for EOL tab
+  *  08b6dc50 - remove unused includes
+  *  8ee5c865 - MSVS support inttypes.h from VS 2015
+  *  7fc245c3 - cmake: show configuration summary
+  *  b9f7bb2b - cmake: add detection of AVX, AVX2, SSE41
+  *  29ab1a42 - fix finding tiffio.h cmake&clang on windows
+  *  30078d8a - fix missing EOL
+  *  66e35c17 - Don't include windows.h from platform.h
+  *  86b62eeb - extend ignore list
+  *  89d09cf5 - Remove unneeded include statements for pgedit.h
+  *  1d6e57ad - pgedit: Remove unused global functions
+  *  afa2fff5 - pdfrenderer: Replace snprintf by std::stringstream
+  *  09cb0bcc - baseapi: Use std::stringstream to format float values
+  *  1eea24ea - Remove strtofloat
+  *  38f68aa6 - Replace sscanf by std::stringstream
+  *  9477eeab - unittest: Add missing unittests to Makefile.am as
+    comments
+  *  918d4664 - unittest: Fix and enable params_model_test
+  *  0df3aa7d - Revert "fix C-API compatibility with 4.0.0 version"
+  *  5b16530f - ETEXT_DESC: fix backwards compatibility with 4.0.0 API
+  *  224b1f6d - fix C-API compatibility with 4.0.0 version
+  *  86b90200 - Add some of the lstm_choice_mode functionality to
+    restore compatibility with the 4.0 Version
+  *  fa948d64 - Removed lstm_choice_mode for backwards compatibility in
+    4.1
+  *  d2816f33 - add removed function to fix API compatibility
+  *  b1078dd6 - Poke sw build on appveyor.
+  *  a1ffcd36 - Use std::stringstream for add_str_double
+  *  aa64a63f - Use std::stringstream to generate PDF output
+  *  78a957b9 - Remove spaces a line endings
+  *  12ca2513 - Revert "e" flag for fopen
+  *  e32b3360 - Fix for MSVC
+  *  332a1a98 - Pass ssse/avx flags to all files to pacify VS ide.
+  *  f88a7f28 - fontinfo: Fix wrong delete
+  *  3dfe1b88 - classify: Modernize function UniformDensity
+  *  72c87414 - Modernize code by replacing C type casts
+  *  95a15a7a - fix cmake&clang build
+  *  f80508bc - added link to testing/README.md to dev rules
+  *  25a42ea4 - fixed failure report for tesstrain commands:
+  *  56427b89 - added minimal description to dev rules
+  *  d5584e79 - fixed failure report for tesstrain commands:
+  *  d35a6f2d - Modernize code (clang-tidy check modernize-deprecated-
+    headers)
+  *  20d5eedd - Modernize code (clang-tidy check modernize-loop-convert)
+  *  fab9a549 - Remove unneeded 'SUBDIRS=' from 3 Makefile.am files
+  *  66733479 - Change page to line in message
+  *  51c35353 - Always display GROUND TRUTH. BEST OCR and ALIGNED TRUTH
+    only if different for debug_level -1
+  *  84d4cc2e - Display OCR TEXT and GROUND TRUTH only when different
+    for debug_level = -1
+  *  546014ae - disable-legacy build: Do not include unused headers
+  *  98346c2c - Modernize and format code
+  *  613c2bf6 - Change pages to lines in message
+  *  e76d81a0 - Include src/training when exporting compile commands
+    with cmake
+  *  e262d71a - Modifiy formatting rules
+  *  3e7144e7 - Update appveyor.yml
+  *  af7cc1ce - Fix windows build.
+  *  81fbd878 - Add more missing include statements for Windows build
+  *  ab009fae - Remove macro WINDLLNAME
+  *  77a5f262 - Remove unused config variable tessedit_module_name
+  *  c150b983 - Add missing include statements for Windows build
+  *  802f42e8 - Remove BOOL8, TRUE, FALSE from host.h
+  *  be96b7b6 - bits16: Format code
+  *  146079f3 - api: Replace BOOL8, TRUE, FALSE by bool, true, false and
+    modernize code
+  *  4e0c726d - ccutil: replace TRUE, FALSE by true, false
+  *  da0c14ae - cutil: Replace TRUE, FALSE by true, false
+  *  87a97365 - classify: Replace BOOL8, TRUE, FALSE by bool, true,
+    false
+  *  30ee3afc - textord: Replace TRUE, FALSE by true, false and use bool
+    instead of BOOL8
+  *  bb52887c - unittest: Replace TRUE, FALSE by true, false
+  *  b391ab84 - wordrec: Replace TRUE, FALSE by true, false
+  *  cbb5e729 - classify: Use bool and replace TRUE, FALSE
+  *  46fa59aa - ccstruct: Replace BOOL8, TRUE, FALSE by bool, true,
+    false and modernize code
+  *  92b9f9f8 - ccmain: Replace TRUE, FALSE by true, false
+  *  7db25e15 - Remove unused config variable tessedit_single_match
+  *  ca2947a2 - blobclass: Remove unused macros
+  *  f2bd98e6 - PageIterator: Remove useless const
+  *  813b7803 - pgedit: Replace BOOL8 by bool
+  *  664811a8 - Replace BOOL8, TRUE, FALSE by bool, true, false
+  *  51a2c2ea - Format code with clang-format
+  *  95ea7787 - capi: Replace FALSE, TRUE and simplify and format code
+  *  89ba48b1 - strngs: Modernize and format code
+  *  127d0e31 - serialis: Modernize and format code
+  *  8b663e76 - helpers: Modernize and format code
+  *  5f064027 - python: optimize imports, reformat code
+  *  2e9fd69c - use 'import pathlib'; fix "TypeError: argument of type
+    'WindowsPath' is not iterable"
+  *  a0527b41 - fix LGTM reports for python
+  *  1948f0d5 - ocrclass: Modernize and format code
+  *  85957e96 - WERD: Don't print space character after "FALSE" at end
+    of line
+  *  83d4433d - Modernize and format unichar.h
+  *  ac0b191f - Modernize and format genericvector.h
+  *  36ed0863 - Modernize and format tesscallback.h
+  *  f47c7c92 - fix uninitialized variables in wordstrboxrenderer and
+    lstmboxrenderer; CID 1399132, 1399134, 1399135, 1399137, 1399140,
+    1399141, 1399142
+  *  497d1c54 - Update appveyor.yml
+  *  5767fe4a - Update appveyor.yml
+  *  ea36e94e - fix Could not parse bool from flag (#2359)
+  *  852598ee - Remove file tessedit.h
+  *  6e59abcc - Remove file cutil.h
+  *  3bbe4327 - fix #2344 libpthread under-linking on FreeBSD
+  *  4ccbb9f8 - configure: Check support of compile flags with -Werror
+  *  b6bfb20f - Improve readability of conditional code
+  *  36a1a30c - Remove some old type casts
+  *  59b90bd4 - Update googletest
+  *  2718b81a - fuzzer-api: Use environment variable TESSDATA_PREFIX if
+    set
+  *  7e9970b4 - Format fuzzer code with clang-format
+  *  270e466d - Add build rule for fuzzer-api
+  *  7cd012f3 - Move fuzzer-api.cpp to subdirectory unittest/fuzzers
+  *  b6b00083 - Use relative path to set TESSDATA_PREFIX
+  *  e9b72d8c - Add API fuzzer
+  *  a44bf41f - Modernize C++ loops
+  *  ed011670 - Modernize C++ code using bool literals
+  *  a0fd9058 - Modernize C++ code using auto
+  *  36f76885 - Modernize C++ code using override
+  *  d8d2f6f4 - Fix broken shell scripts for training
+  *  aaf8c50a - unittest: Use range-for-loops
+  *  631882a3 - Fix compiler warnings (signed / unsigned mismatch)
+  *  ecaad2ac - ccstruct/werd: Format code with clang-format
+  *  b1e305f3 - Simplify code which tests for non-empty StringParam
+  *  f9860cda - Optimize functions ResetFrom
+  *  41da5afe - UNICHARSET: Fix compiler warning (signed/unsigned
+    mismatch)
+  *  91e2b253 - Format modified code with clang-format
+  *  06acbaf9 - IntegerMatcher: Fix division by zero
+  *  da6305b6 - Fix compiler warnings caused by ASSERT_HOST
+  *  44a6d9f4 - intmatcher: Catch more out of bounds reads
+  *  5fd72284 - intmatcher: Catch out of bounds reads
+  *  509ee950 - IntegerMatcher: Fix data type of loop counters
+  *  f4f34a87 - WERD_RES: Fix uninitialized member variable
+  *  afc099b9 - intmatcher: Split data_table
+  *  8749f355 - LINEDATA=false
+  *  bcb7cf98 - sort arguments, use true/false instead of 1/0
+  *  2fcb483e - Update test submodule
+  *  9aadaaba - Fix automake rules for doc-clean and doc-pack
+  *  c2db2721 - Modify distort_image for Boolean
+  *  259d5af6 - Add PSM values to the definition
+  *  8eafec0d - Fix comments with current values of PSM codes
+  *  11e09bd4 - Update appveyor.yml
+  *  02f97c3f - Update appveyor.yml
+  *  e1e56d9d - Remove local function declarations from intmatcher.h
+  *  2ba194ca - Remove four unused parameters
+  *  dd79d56e - Remove unused parameter BlobLength
+  *  9b915d5e - add --distort_image
+  *  f7ffde99 - add --distort_image
+  *  26877ba7 - check min. python version; os.uname is not available on
+    windows
+  *  8891ba97 - add autotools options to cmake build
+  *  f8e85216 - Update tesstrain_utils.py
+  *  6fa8e1bb - Set max_workers=8
+  *  e21499e8 - Set default value for distort_image
+  *  ee2f9bf7 - Remove old comments in file headers
+  *  5f76a849 - Sort options alphabetically in tesseract man page
+  *  b55984fb - Add description for new --dpi option in tesseract man
+    page
+  *  26b4457b - Add description for new --psm values in tesseract man
+    page
+  *  a6981ae5 - Improve man page for tesseract
+  *  6b3c81c9 - Add rule for PDF documentation
+  *  d47b0d58 - Use LATIN_FONTS for kmr
+  *  3eee1d21 - Add kmr and kur_ara, remove kur from training scripts
+  *  297d7d86 - trying to add user words/patterns again:
+  *  b2ebf019 - Add kmr and kur_ara, remove kur from training scripts
+  *  37befdf6 - Add option for --distort_image
+  *  29389f71 - Fix appveyor artifacts.
+  *  e1479756 - Update documentation for supported languages
+  *  85d7feeb - Add missing documentation for --help-extra
+  *  14346e56 - tesstrain: catch+handle SIGINT (to stop waiting on
+    subjobs)
+  *  6cbad17e - tesstrain: check all subjobs' retval
+  *  5316bcbb - tesstrain: check failure of subjobs
+  *  4c2bbebe - Fix compiler warning (-Wunused-value)
+  *  ed84ba0a - Fix wrong comparison
+  *  bbbd262a - Added missing linker flags for MinGW.
+  *  1206362d - `accumulated_timesteps` is not a pointer but a vector
+    and in case we use ChoiceIterator without `lstm_choice_mode`
+    tesseract crashes (or similar) because the check is true and we
+    reference not existing item
+  *  3baf0d80 - Fix boolean assignments
+  *  8ad0489f - Remove svpaint.cpp from libtesseract
+  *  35a999f9 - Fix assertion caused by wrong unicharset
+  *  56a39bda - Fix float division by zero
+  *  5b3e2fe8 - Integrated accumulated Symbol Choice in the Choice
+    Iterator and made the api lstm_choice_mode independent
+  *  4c0b98bd - Replace undefined shift operations by multiplications
+  *  896698a4 - Fix runtime error (left shift of negative value)
+  *  5202208a - Remove globals.h
+  *  e78b5f2a - Update test submodule
+  *  bc2b9198 - Integrated Timesteps per symbol into ChoiceIterator
+  *  754e38d2 - Added the option to get the timesteps separated by the
+    suggested segmentation
+  *  d2c3309d - Update appveyor.yml
+  *  e8176072 - archive_version_details is available from libArchive
+    version 3.2.0
+  *  c4dd5372 - [cmake] Add visibility to all target_link_libraries
+    calls.
+  *  b0f61dfd - Propagate libarchive to tess users.
+  *  37b0c36e - Add libarchive dependency to cppan and sw builds.
+  *  02a1ffe8 - Report libArchive support
+  *  4ed44d70 - cmake: enable libArchive support for non_cppan build
+  *  b3aff7d6 - Fix Index-out-of-bounds in
+    IntegerMatcher::UpdateTablesForFeature
+  *  91d0a71d - Fix assertion caused by wrong unicharset (issue #2301)
+  *  71d4990c - Fix Heap-buffer-overflow in GenericVector<int>::size
+    (issue #2298)
+  *  3912cb1c - LSTM char_whitelist/blacklist (6ac2ff0): more robust
+  *  b7279f6d - unittest: Remove tmp directory from repository and
+    create it during build
+  *  bd95c9d2 - unittest: Add missing libarchive
+  *  b20f8900 - unittest: Add another file from Abseil
+  *  b4599908 - LSTM char_whitelist/blacklist (6ac2ff0): multi-code
+    chars
+  *  8012d5e6 - LSTM char_whitelist/blacklist (6ac2ff0): also sublangs
+  *  6ac2ff08 - trying to add tessedit_char_whitelist etc. again:
+  *  a9d3efb6 - Document that configfile can be a file path
+  *  1c7e0061 - Add initial support for traineddata files in standard
+    archive formats
+  *  56b04d4e - Added the same --tmp_dir flag to tesstrain_utils.sh
+  *  25fa3928 - Added an additional optional --tmp_dir parameter to
+    specify the temporary directory in which tesstrain.py creates the
+    training temporary files. The main reason is due to the slow R/W on
+    HDD, if anyone wants to speed up this process can use as tmp_dir a
+    directory on an SSDrive
+  *  7fbde96a - Format new code with clang-format
+  *  38fac625 - Format new code with clang-format
+  *  a0202bac - Rename function to TessBaseAPIGetTsvText to be
+    consistent to the Create method
+  *  9c90894f - PAGE_RES_IT: Optimize compare operators by using inline
+    code
+  *  295996ed - commandlineflags: Fix compiler warnings
+    (signed/unsigned)
+  *  eb14726a - ICOORD: Fix old type casts
+  *  fb0f1bcf - BoxChar: Fix compiler warnings (signed/unsigned)
+  *  0e1a1fc3 - Validator: Fix compiler warnings (signed/unsigned)
+  *  c7e8131e - Add TSV option to C-API
+  *  22c09934 - rename LSTMBOX to LSTMBox
+  *  c33f03e3 - Add lstmboxand wordstrbox to capi.h
+  *  76ec21df - Add lstmbox and wordstrbox to C-API
+  *  08e96516 - install lstmbox and wordstrbox config files
+  *  646b043d - use space instead of tab
+  *  5ee1deae - correct handling of 0BF0-0BFA Tamil numbers and symbols
+  *  c6cc54aa - Change option -l to --lang
+  *  14c4494f - Allow UTF-8 variant of C locale
+  *  98dd3b63 - Refactor class Network
+  *  25b02bf1 - Treat U_ARABIC_NUMBER as LTR
+  *  2f71fe28 - Use alternative way to comment a block of code (using
+    the c preprocessor).
+  *  449f1cd4 - Remove test for Word started with a combiner
+  *  b3e355a6 - Remove whitespace at line endings
+  *  34e4d6b1 - Revert to 0 (50% percents of images inverted).
+  *  287d5341 - TODO
+  *  3e3e1ed5 - Remove commented Code
+  *  2aded47a - Implement distort_image in text2image - default false
+  *  49ed3a72 - implement PrepareDistortedPix as part of DegradeImage
+  *  9644b582 - Update appveyor.yml
+  *  2cbe723d - Fix doxygen comments
+  *  ef4d5b2e - Optimize calculation of dot product for double vectors
+    with AVX
+  *  b3bd23ed - Remove whitespace at line endings
+  *  38861be6 - Use __builtin_trap instead of null pointer dereference
+    to abort
+  *  4bd18c4c - Travis: Enable continuous integration build for macOS
+  *  a93ef8e0 - Release candidate 1 for 4.1.0
+  *  441779de - fix showing git tag for cmake build
+  *  a2481de9 - Revert "cmake workaround for #2246 for clang"
+  *  ddea230b - Don't compute function tables at compile time with clang
+  *  3480f1e5 - [sw] Fix clang-cl build.
+  *  4d8bbe2c - cmake workaround for #2246 for clang
+  *  7a1c6fe6 - Fix typo
+  *  6e37389f - doc: Don't fail if manpages fail to build
+  *  42ea4324 - configure: Check for xsltproc (needed to generate
+    manpages)
+  *  7f65afba - cmake check for available C++ standard. Minimum reqiered
+    standard is C++11
+  *  862322c1 - Fix check for images which are too small to scale
+  *  a044f643 - fix Myanmar validation rules as per Unicode charts
+  *  d35f119c - Fix a typo in Doxyfile
+  *  50f42ebb - Update test submodule
+  *  c0523ee5 - Fix compiler warning
+  *  35561524 - Compute function tables at compile time
+  *  fd6e281c - Use C++14 compiler if possible
+  *  b3327f4e - Remove unneeded checks for snprintf
+  *  f491eb61 - Simplify tanh and logistic functions and precompute
+    function tables
+  *  f3362a4b - Add renderer to create WordStr box files from images
+  *  7ca27bb1 - Update appveyor.yml
+  *  31105368 - put common code in AddBoxToLSTM
+  *  b51c1bf0 - change to const char* as suggested by @stweil
+  *  86121703 - fix resultiterator_test for extra \n
+  *  0c9f7db5 - Fix compiler warning (-Wimplicit-fallthrough)
+  *  d91c316a - FontInfo: Make sure that deleted member variables can no
+    longer be used
+  *  877e62db - Fix compiler warning (-Wmaybe-uninitialized)
+  *  33f6dc2a - Fix compiler warnings (-Wformat-truncation=)
+  *  2a355ea1 - Fix compiler warnings (-Wimplicit-fallthrough)
+  *  aa2dcca2 - Fix compiler warnings (-Wstringop-truncation)
+  *  d42413dd - OpenCL: Remove PERF_COUNT framework
+  *  86b14c32 - Avoid gmake-specific pattern substitution in
+    Makefile.am. Resolves #2226
+  *  c3b18cfd - Improve description of configs and parameters in
+    tesseract(1)
+  *  da279e42 - Tidy tesseract(1)
+  *  6dc48adf - Rename get.image config to get.images and install
+  *  0f42fd8c - change to use bbox coordinates for TEXTLINE for all
+    characters
+  *  9c89cd51 - Add a new renderer to create box files from images for
+    LSTM training
+  *  56725de8 - Update appveyor.yml
+  *  32af6be4 - disable some subtests in resultiterator_test
+  *  d9590f8a - allow user specified box/tiff pairs with tesstrain.sh
+  *  323361b9 - allow user specified box/tiff pairs with tesstrain.sh
+  *  ad223296 - use --xsize instead of --x_size
+  *  31c48a04 - fix travis
+  *  39ed30ad - Fix build rule for manpages
+  *  0e090cd2 - fix typo
+  *  114bc501 - improve cmake configuration
+  *  2106cba0 - Use universal location for docbook.xsl
+  *  66da4df1 - configure: Remove header check for ICU
+  *  7be04342 - Fix typo
+  *  b4980676 - Fix AVX2 support for Windows builds with MSC
+  *  fc55b587 - use AVX2 SSE for cmake&clang on Windows
+  *  fd881e44 - fix cmake PACKAGE_VERSION to behave same way as in
+    autotools
+  *  394839cd - Fix cmake compiler flags for AVX/SSE support
+  *  b60321e6 - Update test submodule
+  *  4d9bc11f - add --xsize as parameter for tesstrain
+  *  1ac76d88 - Partially fix and enable more unittests Add more
+    subtests to langmodel_test
+  *  eaf5deb6 - Disable ligature related subtest in stringrenderer
+  *  8f87ebb4 - Update test submodule
+  *  14d5547b - Update test submodule
+  *  b30e92fb - turn off openmp build for cmake (issue #263)
+  *  51604dd1 - Disable ligature related subtest in stringrenderer
+  *  dbb12d6f - more updates to lstm related unittests
+  *  86b0f362 - unittest: Skip test is traineddata is missing in
+    applybox_test
+  *  36906064 - Add LF to INFO msgs in lstm_test
+  *  87a4fbac - Update test submodule
+  *  14086af4 - unittest: Add missing Leptonica library for
+    stringrenderer_test
+  *  6b7f7db6 - Fix and enable shapetable_test
+  *  bbd23bbf - Fix and enable lstm related unittests (#2180)
+  *  9e6e3a02 - Fix memory leak for PNG images
+  *  1a398a5b - removed reference to unbound variable
+  *  daf61f75 - automake: Add missing dependency for "check" target (fix
+    parallel build)
+  *  ecf73f5b - training: Don't terminate after processing 8 fonts or 8
+    images
+  *  32e9d7c8 - training: Fix some compiler warnings (signed/unsigned)
+  *  e4b862d5 - pango_font_info: Fix runtime error messages from Pango
+  *  4b24d8cd - Fix and enable stringrenderer_test
+  *  a6da6423 - unittest: Fix and enable validate_myanmar_test
+  *  d67287a5 - unittest: Fix and enable validate_khmer_test
+  *  611d5e63 - unittest: Fix and enable validate_indic_test
+  *  d97f67da - unittest: Fix and enable validate_grapheme_test
+  *  a702f2d2 - unittest: Replace ABSL_ARRAYSIZE by ARRAYSIZE
+  *  77d0b6ce - fix WORDLIST filename
+  *  2c0ddb42 - Update file paths in dawg_test
+  *  57f74d2b - Fix file location for unicharset for mastertrainer_test
+  *  0ee4f630 - Formatting LOG messages from layout_test
+  *  4edc61fd - unittest: Add missing license headers for dawg_test and
+    layout_test
+  *  05cdbc7c - Fix and enable dawg_test
+  *  aec992eb - Update test submmodule and enable additional test in
+    layout_test
+  *  4b821b2c - Fix and enable layout_test
+  *  0d6d8108 - Add sources for layout_test and dawg_test to Makefile
+  *  0f0eaa9f - Partial fix for layout_test and dawg_test
+  *  564482db - Fix selection of IntSimdMatrix method
+  *  277457ff - Update appveyor.yml
+  *  0ae8fdc8 - Fix build for unicharcompress_test
+  *  66e31bfd - OpenCL: Fix alloc-dealloc mismatch
+  *  ad19183b - OpenCL: Fix heap buffer overflow
+  *  e67ad46f - fix typo
+  *  9e599e1e - Partial fix for unicharcompress_test
+  *  9b2bf103 - Fix build for unichar_test
+  *  20ed60b3 - Fix unicharset_test
+  *  db3ed5d6 - Run travis builds without cppan.
+  *  a1ec977f - Revert "Fix broken builds"
+  *  0c5f8194 - Fix broken builds
+  *  226694aa - Update appveyor.yml
+  *  3c52bccc - Update appveyor.yml
+  *  26e130a9 - Update appveyor.yml
+  *  771d5ebb - Update appveyor.yml
+  *  23b80367 - Update .travis.yml
+  *  3749d16e - Update appveyor.yml
+  *  27d6e9d3 - Fix sw build.
+  *  502bb624 - More optimisations for IntSimdMatrix
+  *  95606398 - Clean code for IntSimdMatrix
+  *  7fc7d28d - Compile files for AVX, AVX2 or SSE only when needed
+  *  a9a1035e - Move IntSimdMatrixNative from IntSimdMatrix to unittest
+  *  d36231e3 - Set best or user selected IntSimdMatrix
+  *  605b4d66 - Replace dynamically allocated IntSimdMatrix instances by
+    constants
+  *  26be7c5d - Use constructor with parameters for IntSimdMatrix
+  *  e237a384 - Add const attributes to IntSimMatrix multiplier
+  *  7c701477 - Move shaped weights from IntSimMatrix to WeightMatrix
+  *  ea4d0d35 - Format comment
+  *  c79d613b - Replace ASSERT_HOST by assert
+  *  c4de29d1 - unittest: Allow more time for apiexample_test when using
+    a debug build
+  *  e6775163 - unittest: Fix comment
+  *  a5283f29 - Add test for the C++ implementation of MatrixDotVector
+  *  9adf6e44 - Revert 59fb3370bbf36cf8db6b7aae557fe6fd5e297bf3 (-ffast-
+    math)
+  *  5d3d2512 - Fix build for unittest
+  *  ebbf907c - Fix typo in hocr character box output
+  *  4ce797b6 - Fix hocr character box info to use new hocr renderer
+    correctly
+  *  a0e6586e - Fix documentation for page segmentation mode 2
+  *  0fae848b - OpenCL: Add comments to users of openclwrapper.h
+  *  e0fc4f29 - Remove opencl_device_selection.h
+  *  62b85755 - [sw] Depend on leptonica-master.
+  *  7732f65b - Activate sw builds.
+  *  c39a95ca - try to fix appveyor
+  *  bd1c05c1 - remove old line
+  *  c41a80f1 - respect cmake -DCPPAN_BUILD=OFF
+  *  595bb7df - OpenCL: Remove unused code
+  *  b8de0643 - Ensure baseapi.h header is used by commontraining.h
+    regardless of autotools usage
+  *  cd34ee55 - Add necessary intproto.h header to protos.cpp
+  *  ff2535f8 - Avoid linking pthread on Android
+  *  62b635a7 - Remove unused functions from cluster.cpp
+  *  f76d8a14 - Remove unused code from oldlist
+  *  7719f801 - Add missing std namespace in tensorflow code
+  *  8a6fa452 - Fix build for architectures without CPUID
+  *  91af0102 - Fix compiler warning
+  *  5dd606c6 - Replace NULL by nullptr
+  *  5f96ac1a - Update cmake compiler flags for new simdetect.cpp
+  *  d9600cd8 - Fix and simplify SIMD tests
+  *  d3065520 - fix 2 clang warnings
+  *  cb049133 - Fix compiler warning
+  *  b9a34d74 - add support for clang on windows (cmake&ninja)
+  *  3e6ec97a - Remove altorenderer.cpp from resource compiling (already
+    included in tesseract_src)
+  *  8885fe2c - provide info about compiled openmp version
+  *  993e56ff - Don't try to create text output if other renderers
+    failed (fix regression)
+  *  cc997b53 - add  missing the implementation for
+    TessBaseAPIGetAltoText method in C-API
+  *  e3a39c35 - Revert "Switch windows builds to SW."
+  *  0967a324 - Switch windows builds to SW.
+  *  db9c7e03 - Use std::stringstream to generate hOCR output
+  *  c7e8d302 - Fix value for PHYSICAL_IMG_NR in ALTO output
+  *  fda0fa4e - Add new hocrrenderer.cpp to CMakeList.txt and Android.mk
+  *  457c5302 - Fix indentation of hOCR output
+  *  5de3fc47 - Format code in new file hocrrenderer.cpp
+  *  48713f7d - Move code for hOCR renderer to new file
+  *  e398601b - Include ALTO in list of supported output formats
+  *  1f5fb15a - remove setting constant resolution from
+    ImageThresholder::SetImage. Credible resolution with be set
+    afterward. Fixes #2080.
+  *  b8c4f1b9 - protos: Remove unused config variable
+  *  f35eeb3b - protos: Remove several unused macros, functions and
+    global variables
+  *  fbbbdb45 - Use std::stringstream to generate ALTO output and add
+    <SP> element
+  *  7ebd3153 - Fix several typos (most of them found by codespell)
+  *  81ab302d - FPRow: Remove three unused methods
+  *  404f9cd1 - SimpleStats: Remove unused method
+  *  2c044df9 - Fix wrong x_fsize in hOCR output (regression)
+  *  2ccc5810 - Add check whether compiler supports -march=native flag
+  *  c9e85ab7 - Fix wrong font attributes in hOCR output
+  *  0bdae8f8 - GENERIC_2D_ARRAY: Fix runtime error in assignment
+    operator
+  *  f0a4d041 - Add config variable for selection of dot product
+    function
+  *  1910b1a7 - SIMDDetect: Use tesseract namespace and format code
+  *  66d3275d - IntSimdMatrixSSE: Remove unused include statement and
+    simplify code
+  *  048eb349 - Add missing static attribute to local inline functions
+  *  b73370aa - Remove unneeded test for nullptr
+  *  e2419b19 - Fix potential crash in tprintf
+  *  6b6d9de4 - Fix potential crash in STRING class
+  *  59fb3370 - Use -ffast-math for calculation of dot product
+  *  fda3ba90 - IntSimdMatrixSSE: Fix comment
+  *  c59c45fb - Fix Amharic font list
+  *  57d0ae06 - Use Python3 for LGTM
+  *  b148644c - Make Python script executable
+  *  ed48b2a8 - Format new ALTO code with clang-format
+  *  e817d93e - Add configuration file for ALTO to installation
+  *  d7cee03a - Add support for ALTO output
+  *  3c047f0a - Optimize performance by using inline function DotProduct
+  *  e161501d - Optimize performance by using inline
+    MatrixDotVectorInternal
+  *  685b136d - Fix incorrect condition.
+  *  0223abcb - Add example in README.md
+  *  8aa25239 - Fix some of Codacy's complaints
+  *  9122e624 - Autoreformat code
+  *  d9ae7ecc - Pythonize tesstrain.sh -> tesstrain.py
+  *  fc8a3d5b - combine condition with next
+  *  5c85d8e0 - add missed letters and symbols - 0x104a to 0x104f -
+  *  b08624ac - Reapply: Add sw build system script (future cppan
+    replacement).
+  *  19580b18 - Revert "Add sw build system script (future cppan
+    replacement)."
+  *  b1e20043 - Add sw build system script (future cppan replacement).
+  *  9b783822 - Remove unused include statements for tprintf.h
+  *  a93426c9 - Fix wrong results from function streamtofloat
+  *  acca4fb9 - Fix some unbound variables and other small issues in
+    training shell scripts
+  *  a4b03fbb - Fix warning from shellcheck
+  *  bfe58aa5 - Fix unbound variable $FONTS
+  *  92b88338 - fix(configure) Don't add rt on Android
+  *  0915cbd5 - Simplify shell script using mktemp
+  *  edb76e28 - Simplify MKTEMP_DT logic
+  *  dbfc89f9 - Fix mktemp in tesstrain_utils.sh
+  *  ff5347c4 - Fix memory leak in osd_test
+  *  5209aa6c - Fix memory leak in loadlang_test
+  *  74f6d0e7 - Fix memory leak in apiexample_test
+  *  303ac971 - Fix memory leaks and typos in progress_test
+  *  ce88adbf - fix issue #1192
+  *  fae47eb8 - Update test submodule
+  *  72495716 - fix typo in non VS build
+  *  eb104f9f - VS build: fix warning C4996: The POSIX name for this
+    item is deprecated. Instead, use the ISO C and C++ conformant name.
+  *  cdfb7680 - move langtests and unlvtests from tesseract-ocr
+    repository to test repository
+  *  cbef2ebe - implement patches vcpkg tesseract
+  *  7a7f2262 - ocrclass: Remove unused macros
+  *  2dd753ee - replace VS implementation of gettimeofday with
+    std::chrono::steady_clock::now(); fixes #2038
+  *  f4ec5bee - Remove dummy test
+  *  73cefff3 - Include LICENSE file in distribution
+  *  61848929 - Remove redundant file COPYING
+  *  ad30f52e - Dockerfile: Delete the apt-get lists after installing
+  *  0869fdfd - Dockerfile: Replace deprecated MAINTAINER by LABEL
+  *  439dfaaf - un-fix one of the warnings
+  *  30be5aaa - fix a couple minor compiler warnings
+  *  422d1ca2 - Uses CMAKE_CURRENT_ variables instead of PROJECT_
+  *  58328405 - Adjusts CMAKE_MODULE_PATH instead of the include()'s
+  *  a4cb790e - Reverts change on EXECUTABLE_OUTPUT_PATH
+  *  e87dc5b1 - Uses PROJECT_ variables instead of CMAKE_ variables so
+    it can be included using add_subdirectory
+  *  6f8bd340 - Remove chopper.h
+  *  286dfb03 - Remove unused include statements
+  *  2098bb6d - Remove unused function ComputeOrientation
+  *  cad6ebb5 - LIST: Remove old comments
+  *  2a2bc8af - Update README.md
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 07 Jul 2019 18:23:57 +0300
+
 tesseract (4.0.0-2) unstable; urgency=medium
 
   * Honour DEB_BUILD_OPTIONS=nocheck. (Closes: #919810)
