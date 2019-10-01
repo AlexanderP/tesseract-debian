@@ -258,7 +258,7 @@ tesseract (4.1.0-1) unstable; urgency=medium
   *  613c2bf6 - Change pages to lines in message
   *  e76d81a0 - Include src/training when exporting compile commands
     with cmake
-  *  e262d71a - Modifiy formatting rules
+  *  e262d71a - Modify formatting rules
   *  3e7144e7 - Update appveyor.yml
   *  af7cc1ce - Fix windows build.
   *  81fbd878 - Add more missing include statements for Windows build
@@ -867,7 +867,7 @@ tesseract (4.00~git3241-1066f696-1) unstable; urgency=medium
   *  6ffb53f8 - win32: Show TIFF errors on console
   *  f5dfab15 - Add Leptonica lib for baseapi_test
   *  47343174 - fixes #408 - text2image: comma in font name
-  *  5f4f9372 - revert debug message commited by mistake
+  *  5f4f9372 - revert debug message committed by mistake
   *  f6fd9b3a - Handle null raw_choice - fixes #235, fixes #246
   *  90403ef3 - update dist-hook
   *  b0b5bd62 - build doc only for tesseract engine
@@ -1141,7 +1141,7 @@ tesseract (4.00~git2844-607e8fd8-1) unstable; urgency=medium
   * fix patch - man.diff, helptext
   * fixed build with dpkg-buildpackage -A (closes: #901750)
   * fixed path to phototest.tif
-  * Update dependencie for tesseract-ocr, libtesseract4 - add
+  * Update dependencies for tesseract-ocr, libtesseract4 - add
     "liblept5 >= 1.75.3"(closes: #903606)
   * URL: git://github.com/tesseract-ocr/tesseract.git
   * Branch: master
