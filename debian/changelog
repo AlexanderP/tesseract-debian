@@ -1,3 +1,13 @@
+tesseract (5.0.0~git4328-a3cfd66f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: a3cfd66f37aa76871d1e8d8b4f3d5791a9c373df
+  * Date: 1571118982
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 16 Oct 2019 23:20:53 +0300
+
 tesseract (4.1.0-3) unstable; urgency=medium
 
   * Update debian/control:
