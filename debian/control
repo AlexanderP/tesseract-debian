@@ -14,7 +14,7 @@ Vcs-Browser: https://github.com/AlexanderP/tesseract-debian
 Package: tesseract-ocr
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
- tesseract-ocr-eng (>= 4.9.9~), tesseract-ocr-osd (>= 4.9.9~), libtesseract5 (>= 5.0.0~), liblept5 (>= 1.75.3)
+ tesseract-ocr-eng (>= 4.9.9~), tesseract-ocr-osd (>= 4.9.9~), libtesseract5 (= ${binary:Version}), liblept5 (>= 1.75.3)
 Replaces: tesseract-ocr-data
 Description: Tesseract command line OCR tool
  Tesseract is an open source Optical Character Recognition (OCR)
