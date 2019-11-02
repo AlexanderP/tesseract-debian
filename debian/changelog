@@ -7,7 +7,7 @@ tesseract (4.1.0-3) unstable; urgency=medium
     - update dependency libtesseract4 for tesseract-ocr (closes: #942760)
   * Bump Standards-Version to 4.4.1
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 02 Oct 2019 21:50:47 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 01 Nov 2019 00:03:00 +0300
 
 tesseract (4.1.0-2) unstable; urgency=medium
 
@@ -761,7 +761,7 @@ tesseract (4.1.0-2) unstable; urgency=medium
   *  cad6ebb5 - LIST: Remove old comments
   *  2a2bc8af - Update README.md
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 07 Jul 2019 18:23:57 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 04 Sep 2019 20:44:12 +0300
 
 tesseract (4.0.0-2) unstable; urgency=medium
 
