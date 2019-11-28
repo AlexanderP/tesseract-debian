@@ -5,6 +5,14 @@ tesseract (4.1.0-3) unstable; urgency=medium
     - add build dependency on libarchive-dev
     - add dependency on tesseract-ocr-equ for tesseract-ocr-all
     - update dependency libtesseract4 for tesseract-ocr (closes: #942760)
+    - add package tesseract-training
+  * Moved tesstrain.sh to tesseract-training package
+  * Moved ambiguous_words, classifier_tester, cntraining,
+    combine_lang_model, combine_tessdata, dawg2wordlist,
+    lstmeval, lstmtraining, merge_unicharsets, mftraining,
+    set_unicharset_properties, shapeclustering, text2image,
+    unicharset_extractor, wordlist2dawg to tesseract-training 
+    package (closes: #933878)
   * Bump Standards-Version to 4.4.1
 
  -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 01 Nov 2019 00:03:00 +0300
