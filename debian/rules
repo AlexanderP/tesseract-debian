@@ -33,8 +33,8 @@ override_dh_auto_install:
 
 override_dh_auto_test:
 ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
-	./src/api/tesseract -v
-	./src/api/tesseract ./test/testing/phototest.tif -
+	./tesseract -v
+	./tesseract ./test/testing/phototest.tif -
 endif
 
 override_dh_auto_clean:
