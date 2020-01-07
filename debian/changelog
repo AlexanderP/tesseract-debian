@@ -1,13 +1,303 @@
-tesseract (4.1.0-3) unstable; urgency=medium
+tesseract (4.1.1-1) unstable; urgency=medium
 
+  * New upstream release.
   * Update debian/control:
     - delete build dependency from autoconf-archive
     - add build dependency on libarchive-dev
     - add dependency on tesseract-ocr-equ for tesseract-ocr-all
     - update dependency libtesseract4 for tesseract-ocr (closes: #942760)
   * Bump Standards-Version to 4.4.1
+  * URL: git://github.com/tesseract-ocr/tesseract.git
+  * Branch: 4.1
+  * Commit: f4ef2f2050f4c25b28bdbf0063b7d2eb30f41cf7
+  * Date: 1577374826
+  * git changelog:
+  *  f4ef2f20 - 4.1.1 Release
+  *  01fb4c7f - BlockPolygon: clip to image rectangle
+  *  36664031 - BlockPolygon: unrotate from internal to image
+    coordinates
+  *  0ab9839a - Use /W4 instead of /Wall for MSVC (fix issue #2816)
+  *  6343f0ab - Added ComposedBlock level to Alto output
+  *  42ec3137 - ignore qtcreator help files
+  *  88174fea - backport changes pagesegmode_test.cc from master
+  *  7389a275 - Provide more details for successful running of
+    unittests.
+  *  9d967cb1 - unittest: Fix build and simplify build rules
+  *  69cbda61 - unittest: Initialize non-static class members in
+    RecodeBeamTest (CID 1402765)
+  *  85477214 - unittest: Fix two issues reported by Coverity Scan (CID
+    1402761, 1402755)
+  *  bdad0686 - unittest: Add missing precision specifiers (CID 1402752)
+  *  95733433 - unittest: Don't build tatweel_test when TensorFlow is
+    disabled
+  *  2b04ff76 - unittest: Add missing libraries to fix linker errors
+  *  16b1e5d2 - Update test submodule and fix pagesegmode_test
+  *  50a41b63 - Update test submodule and fix tatweel_test
+  *  cb762753 - Update sw.cpp
+  *  cafdc7fa - fix sw build
+  *  0c599556 - fix ABI compatibility (move training files back to 4.1.0
+    location)
+  *  def1dc46 - fix training build
+  *  b559c330 - cmake: fix typo
+  *  21c83b80 - Use "C" locale for printing parameters
+  *  6d8ef9a1 - fix using bilevel tiff in pdf output
+  *  eaf1f696 - Fix issue #2748
+  *  1ce3cd28 - Use BRT_UNKNOWN instead of BRT_NOISE to initialize
+    ColPartition::blob_type_
+  *  d20db0f2 - Add missing libraries in configuration for pkg-config
+  *  41ec6271 - Exposed the text2image option --ptsize to tesstrain.sh.
+    Text2image has the option --ptsize which defaults to 12.  This
+    option is not exposed through tesstrain.sh; thus, you cannot use
+    tesstrain.sh to explore training with different font sizes.  I made
+    a small modification to expose the --ptsize option to tesstrain.sh.
+    It defaults to 12 if not specified.
+  *  975c626d - Fail if no valid lstmf file was written (fix issue
+    #2741)
+  *  185d237c - Don't create an empty lstmf file
+  *  2f011aec - Use pre-calculated lookup tables for all C++ compilers
+  *  13237d85 - Fix build for Intel Compiler (issue #2736)
+  *  87291fff - Improve ABI compatibility with version 4.1.0
+  *  960583ca - partly Revert "Remove global array kPolyBlockNames from
+    Tesseract library" to improve backwards API compatibility
+  *  c423ad42 - partly Revert "Add more initial values for class
+    Classify from constructor to header file" to improve backwards API
+    compatibility
+  *  b36cd639 - Revert "Delete copy constructor and assignment operator
+    for TessBaseAPI (fix issue #874)"
+  *  d423fb16 - add cppan depreciate info
+  *  979b17f2 - fix sw build (add missing part from Move LSTMTrainer
+    from libtesseract to libtesseract_training)
+  *  b8089979 - fix cmake training build
+  *  a2444bc5 - fix string conversion in lstmtrainer
+  *  cca107d5 - fix autotools build of tesseract library
+  *  2b4212c2 - add untracked src/training/lstmtrainer.h
+  *  0cbd8297 - 4.1.1 Release Candidate 1
+  *  dadf1329 - cmake: fix clan openmp build on windows
+  *  710fa82f - fix inverting (Bilevel BW png) in pdf; fixes # 2059
+  *  f27ca3e3 - Add pageseg_apply_music_mask option to allow disabling
+    the music mask
+  *  6a671e39 - remove legacy parameter disable_character_fragments from
+    lstm.train
+  *  cdd2a887 - src/ccutil/bits16.h remove warnings (#2726)
+  *  23669398 - Remove warning C4312
+  *  9295381d - Subject: training: show error description for
+    open/delete file
+  *  4bbfabaa - Delete copy constructor and assignment operator for
+    TessBaseAPI (fix issue #874)
+  *  e3441f0c - Copy resolution of source image (fix issue #1702)
+  *  090d3c4b - Fix typo in README.md (found by codespell)
+  *  7488c85e - fix memory leak at PangoFontInfo::CanRenderString
+  *  080f83a1 - Change from HTTP to HTTPS
+  *  4a5ec186 - test for synthesized font faces.
+  *  f9d1bda7 - cmake: add minimum required version for pango and icu
+    based on autotools
+  *  99645e3c - text2image: show pango version
+  *  077616fd - quadlsq: Fix warnings from LGTM
+  *  02d916a6 - Use "C" locale for PDF output
+  *  efc2b760 - Use "C" locale for ALTO output
+  *  83af58c2 - Fix build error (undefined local variable)
+  *  6a8be20b - Remove unimplemented +/- for parameter files
+  *  c7e9f31b - do not exit if not existing parameter is used. fixes
+    #1334
+  *  03a05869 - Report when tesseract legacy engine not present. (fix
+    issue #2053)
+  *  17828fc7 - Fix isolated build.
+  *  9c52eb0c - Add new parameter "document_title" to set the title in
+    OCR output files
+  *  e43eb910 - sw.cpp: Sync list of public headers with Autotools build
+  *  fc45fc51 - CMake: Sync list of public headers with Autotools build
+  *  a5670421 - speed optimisation - add the option to disable automatic
+    inverting of line images
+  *  ebff4dae - Fix comment which referred to unused Tesseract parameter
+  *  b244bd1c - Removed unused parameters
+  *  58122ea3 - Don't create OCR result files when training data is
+    created
+  *  3dfd7272 - Simplify configure.ac
+  *  ca172592 - Add support for image or image list by URL
+  *  190536bb - Modernize code for LIST (fix some -Wold-style-cast
+    warnings)
+  *  49659dbc - mfoutline: Modernize code
+  *  4f815797 - intmatcher: Avoid conversion from double to float and
+    vice versa
+  *  8602568b - Remove unneeded compare statement (-Wtautological-
+    unsigned-enum-zero-compare)
+  *  58557299 - cmake: Set default build type to Release
+  *  b913bedf - cmake: AUTO_OPTIMIZE: enable to turn-off auto optimize
+    macros
+  *  be68642e - cmake: arch files: fix duplicate build and follow
+    autotools logic
+  *  0af21dcd - Re-add strngs.h to public API
+  *  9fb7aa69 - Add missing linker flags for TensorFlow
+  *  ad97b521 - cmake: auto optimize macros must be run before setting
+    CMAKE_CXX_FLAGS*
+  *  f8d95bb4 - cmake: fix build type flags
+  *  51a8c08b - ignore #pragma optimize for clang-cl
+  *  3d5b1b62 - cmake: remove moved (training) header from installation
+  *  c1de84e4 - Update sw build.
+  *  ec212754 - Update sw build.
+  *  4c3c3857 - Remove vecfuncs.cpp and vecfunc.h
+  *  8993319c - Disable legacy build: Disable bitvec.h
+  *  ebe136c0 - Remove STRING from the public Tesseract API
+  *  601ee342 - Add more initial values for class Classify from
+    constructor to header file
+  *  224f1c01 - Disable legacy build: Disable more unneeded code
+  *  2d4b3554 - Fix CID 1405673 part 2 (Uninitialized members)
+  *  dd8bfa0d - fix langdata (user words/patterns) file suffixes for
+    LSTMs:
+  *  357177c1 - Disabled legacy build: Disable more unneeded code
+  *  a3e1463e - Fix CID 1405673 (Uninitialized members)
+  *  44a22608 - Fix CID 1164624 (Uninitialized members)
+  *  4c987baa - Fix comment for Textord::make_prop_words
+  *  deae22ac - Re-order initialisation in constructor of class
+    ViterbiStateEntry
+  *  45bd039e - Move initial values for class ColPartition from
+    constructor to header file
+  *  24bc9d49 - Re-order initialisation in constructors of classes Dawg
+    and DawgPosition
+  *  f6cc2beb - Fix CID 1164666 (Uninitialized scalar field)
+  *  20b2da68 - Fix CID 1164664 (Uninitialized scalar field)
+  *  5138b3e5 - Fix CID 1375402 (Uninitialized pointer field)
+  *  b2ab64ef - simd: Check OSXSAVE bit before calling _xgetbv
+  *  96e60a52 - Remove UnicharAmbigs for builds without legacy code
+  *  0eacee03 - Disabled legacy engine build: Disable code related to
+    ambigs.
+  *  80c36095 - Fix 1164647 (Uninitialized members)
+  *  567fc173 - Fix CID 1366450 (Uninitialized scalar field) for class
+    RecodeBeamSearch
+  *  b1965ad0 - Fix CID 1164662 (Uninitialized scalar field)
+  *  73de2d99 - Fix CID 1164659 (Uninitialized scalar field)
+  *  90936b98 - Fix CID 1164657 (Uninitialized scalar field)
+  *  f9dd65a2 - Fix CID 1164649 (Uninitialized scalar field)
+  *  77bdad4b - Fix CID 1164648 (Uninitialized scalar field)
+  *  f4b4e476 - Fix CID 1164644 (Uninitialized scalar field)
+  *  54d84989 - Fix CID 1164643 (Uninitialized scalar field)
+  *  7c749472 - Fix CID 1164638 (Uninitialized scalar field)
+  *  60f3b89a - Fix CID 1164636 (Uninitialized pointer field)
+  *  33e6d049 - Fix CID 1164634, CID 1164635 (Uninitialized pointer
+    field)
+  *  ffd6f966 - Fix CID 1164633 (Uninitialized pointer field)
+  *  09abbc33 - Fix CID 1164628 ff (Uninitialized pointer field) and
+    optimize class ParamContent
+  *  a1c88417 - Remove unused FeatureEnabled from FEATURE_DEFS_STRUCT
+  *  b38c6d6c - Fix CID 1164622 (Uninitialized pointer field)
+  *  b5655827 - Fix CID 1164620 (Uninitialized pointer field)
+  *  33ee0694 - Fix CID 1386105 (Logically dead code)
+  *  d6401f92 - Fix CID 1402767 (Invalid type in argument to printf
+    format specifier)
+  *  c09eea18 - Remove unused italic, bold in class BLOCK_RES and class
+    WORD_RES
+  *  3a88b99c - Fix CID 1340276 (Uninitialized scalar field) for class
+    BLOB_CHOICE
+  *  3f86fc8f - Fix CID 1400760 (Uninitialized scalar field) for class
+    BLOCK
+  *  0a5443c9 - Fix two issues reported by Coverity Scan and modernize
+    class WERD_RES
+  *  f86f839a - Optimize classes Trie, Dawg and DawgPosition
+  *  e6728ff0 - Optimize classes CLIST_ITERATOR, ELIST_ITERATOR,
+    ELIST2_ITERATOR
+  *  76010347 - Optimize class Classify
+  *  39788fc7 - Optimize class TFile
+  *  fbb9db83 - Optimize class ColPartition
+  *  e77f9573 - Optimize struct LMConsistencyInfo
+  *  c48315ec - Optimize class ViterbiStateEntry
+  *  69c48297 - Modernize and optimize BLOBNBOX and remove
+    BLOBNBOX::ConstructionInit
+  *  b8c516de - tfnetwork: Fix info text
+  *  591110ec - Re-order commands in autogen.sh
+  *  8615e6e3 - RecodedCharIDHash: Fix runtime errors detected by
+    UndefinedBehaviorSanitizer
+  *  e4389be9 - OSResults: Fix runtime errors detected by
+    UndefinedBehaviorSanitizer
+  *  3951f840 - BitVector: Fix runtime errors detected by
+    UndefinedBehaviorSanitizer
+  *  e11e50fd - ccutil: Remove old comments
+  *  e142b5ec - Use type bool for boolean values in class BLOBNBOX
+  *  df3612d3 - Fix warnings from LGTM
+  *  84083138 - fuzzer-api: Use optional macro LIB_FUZZING_ENGINE for
+    build
+  *  0a9ef388 - Add missing TensorFlow libraries for fuzzer-api
+  *  e892cc27 - Fix crash when function lookup tables are accessed with
+    NaN
+  *  863a5b42 - capi: Add missing PSM_RAW_LINE to TessPageSegMode
+  *  f15e2cc1 - fix typo
+  *  7e980df0 - simd: Check whether the OS supports FMA, AVX, ...
+  *  e413b931 - classify/Makefile: Fix inconsistent style
+  *  d8f69527 - fix #2616: allow building of training data
+  *  55b4099a - Export some classify vars.
+  *  0d8be252 - Remove more code for builds with disabled legacy engine
+  *  b52c466a - [sw] Update build for commit
+    e84cb24def47cb08d9614110fbc1d5d57934cf98
+  *  0bce4ebb - [sw] Try to fix build.
+  *  c9ecab88 - Move source files which are used for training only to
+    src/training
+  *  b80acd81 - OpenCL: Add static attribute for kernel_src
+  *  14665dfa - Remove unused functions create_edges_window,
+    draw_raw_edge
+  *  91f0de94 - Remove unused function truncate_path and related files
+  *  c3d4742a - Remove global array kPolyBlockNames from Tesseract
+    library
+  *  25c411c8 - [sw] Update build script.
+  *  92b46001 - cmake: Don't link pthread on Windows
+  *  5989f128 - Fix linker error in Appveyor CI
+  *  5d226547 - universalambigs: Add hack to fix builds with Microsoft
+    compiler
+  *  26feea5e - [sw] Use the latest pango again.
+  *  9dd392d8 - move fileio.cpp and fileio.h to training (this fix
+    android build)
+  *  ea34763f - universalambigs: Replace octal characters by UTF-8
+    string
+  *  a4732834 - Clean ambigs.h
+  *  8ebcea29 - Use pangocairo-1.43 for the moment. Remove private pango
+    header.
+  *  49ce908e - Try to fix #2599
+  *  f522b51b - [sw] Install tess headers.
+  *  7fcad192 - cmake: Add missing pthread library
+  *  d6a1e2dd - cmake: Add missing include directory for LibArchive
+  *  a2dd6bf3 - [appveyor] Disable VS2019 image because it's too slow.
+  *  5541a3d5 - Update appveyor.yml
+  *  b21779d6 - Improve formatting of hOCR output with character boxes
+  *  d3386817 - Use auto data type for results of std::ftell
+  *  47c8710a - Remove unused filesize_ from class InputBuffer
+  *  e34acfeb - Simplify shell code (fixes warning from Codacy)
+  *  8baf8171 - Use long instead of off_t for result from ftell
+  *  055f32d4 - Fix training script for macOS (issue #2578)
+  *  a469224e - Fix some compiler warnings (unused local variables)
+  *  5775cf05 - Implemented improved bounding box algorithm
+  *  25b1a4b9 - classify: Use fixed size bit vector
+  *  c01d230c - Give word's bounds to callback also during second pass
+  *  574586a8 - Update appveyor.yml
+  *  59659ddc - Remove structures.*
+  *  5912204d - [appveyor] Enable artifacts.
+  *  4bc94da1 - fix cmake warning.
+  *  40b69539 - Remove unused functions reverse16, reverse32
+  *  ae6eddcc - Remove non portable sleep by std::this_thread::sleep_for
+  *  09837a60 - [appveyor] Print sw version for reference.
+  *  5e3772ca - fix #2101
+  *  e4936adf - Update appveyor.yml
+  *  3cf48957 - [build][sw] Disable FMA dotproduct.
+  *  25a6fe7b - arch: Reduce number of include files for dot product
+    functions
+  *  2e1cd1d4 - Add dot product implementation for Intel FMA (double =
+    tessdata_best)
+  *  27af9e88 - use Ubuntu Xenial for travis
+  *  838b6476 - Give info about expected leptonica dependencies (fix
+    #2333)
+  *  ba8e870f - Optimize tprintf implementation
+  *  75a9926f - FPRow: Add missing initialisation for scalar (CID
+    1402754)
+  *  cad3433d - Fix format strings for size_t arguments (CID 1402762,
+    1402767)
+  *  c2839ecf - Fix format string for 64 bit integer (CID 1402986)
+  *  595e263c - tfnetwork: Add missing return statement (CID 1402992)
+  *  cc1486d2 - [cmake] Hide unnecessary find_package.
+  *  3afc185a - Implement CMake+SW build.
+  *  5688c26b - Avoid using experimental C++14/17 support in CMake
+  *  4b4e1f1e - fix tesstrain.py error
+  *  b8014ee1 - fix windows stdout messy code (#2546)
+  *  d93346ff - cmake: do not report unused-command-line-argument for
+    clan released target
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 01 Nov 2019 00:03:00 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 26 Dec 2019 23:46:07 +0300
 
 tesseract (4.1.0-2) unstable; urgency=medium
 
