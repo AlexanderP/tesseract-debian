@@ -4,7 +4,6 @@ tesseract (4.1.1-1) unstable; urgency=medium
   * Update debian/control:
     - delete build dependency from autoconf-archive
     - add build dependency on libarchive-dev
-    - add dependency on tesseract-ocr-equ for tesseract-ocr-all
     - update dependency libtesseract4 for tesseract-ocr (closes: #942760)
   * Bump Standards-Version to 4.4.1
   * URL: git://github.com/tesseract-ocr/tesseract.git
@@ -297,7 +296,7 @@ tesseract (4.1.1-1) unstable; urgency=medium
   *  d93346ff - cmake: do not report unused-command-line-argument for
     clan released target
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 26 Dec 2019 23:46:07 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 10 Jan 2020 19:36:23 +0300
 
 tesseract (4.1.0-2) unstable; urgency=medium
 
