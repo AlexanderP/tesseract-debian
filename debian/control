@@ -26,7 +26,7 @@ Package: libtesseract-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libtesseract4 (= ${binary:Version}), ${misc:Depends}, libleptonica-dev
+Depends: libtesseract4 (= ${binary:Version}), ${misc:Depends}, libleptonica-dev, libarchive-dev
 Replaces: tesseract-ocr-dev (<< 3.0.1-1~)
 Breaks: tesseract-ocr-dev (<< 3.0.1-1~)
 Description: Development files for the tesseract command line OCR tool
