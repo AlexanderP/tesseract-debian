@@ -6,7 +6,7 @@ tesseract (5.0.0~git4328-a3cfd66f-1) unstable; urgency=medium
   * Commit: a3cfd66f37aa76871d1e8d8b4f3d5791a9c373df
   * Date: 1571118982
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, Sun, 19 Jan 2020 09:48:59 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 19 Jan 2020 09:48:59 +0300
 
 tesseract (4.1.1-2) unstable; urgency=medium
 
