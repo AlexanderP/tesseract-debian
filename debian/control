@@ -26,7 +26,7 @@ Package: libtesseract-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libtesseract5 (= ${binary:Version}), ${misc:Depends}, libleptonica-dev
+Depends: libtesseract5 (= ${binary:Version}), ${misc:Depends}, libleptonica-dev, libarchive-dev
 Replaces: tesseract-ocr-dev (<< 3.0.1-1~)
 Breaks: tesseract-ocr-dev (<< 3.0.1-1~)
 Description: Development files for the tesseract command line OCR tool
@@ -105,7 +105,6 @@ Depends: ${misc:Depends}, tesseract-ocr,
         tesseract-ocr-pus, tesseract-ocr-san, tesseract-ocr-sin, tesseract-ocr-srp-latn,
         tesseract-ocr-syr, tesseract-ocr-tgk, tesseract-ocr-tir, tesseract-ocr-uig,
         tesseract-ocr-urd, tesseract-ocr-uzb, tesseract-ocr-uzb-cyrl, tesseract-ocr-yid,
-        tesseract-ocr-equ,
         tesseract-ocr-osd, tesseract-ocr-afr, tesseract-ocr-ara, tesseract-ocr-aze,
         tesseract-ocr-bel, tesseract-ocr-ben, tesseract-ocr-chr, tesseract-ocr-enm,
         tesseract-ocr-epo, tesseract-ocr-est, tesseract-ocr-eus, tesseract-ocr-frk,
