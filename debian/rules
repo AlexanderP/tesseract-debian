@@ -16,7 +16,7 @@ ifeq (,$(NUMJOBS))
 endif
 
 %:
-	dh $@ --parallel
+	dh $@ --parallel --with autoreconf
 
 override_dh_auto_build:
 	make -j$(NUMJOBS)

@@ -1,3 +1,11 @@
+tesseract (4.1.1-2.1) unstable; urgency=medium
+
+  [ Peter Green ]
+  * Edit configure.ac to disable -march=native (Closes: #949638)
+  * Edit control/rules to enable autoreconf.
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 04 Feb 2021 21:49:33 +0100
+
 tesseract (4.1.1-2) unstable; urgency=medium
 
   * Update debian/control:
