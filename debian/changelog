@@ -21,6 +21,14 @@ tesseract (4.1.1-1) unstable; urgency=medium
     - delete build dependency from autoconf-archive
     - add build dependency on libarchive-dev
     - update dependency libtesseract4 for tesseract-ocr (closes: #942760)
+    - add package tesseract-training
+  * Moved tesstrain.sh to tesseract-training package
+  * Moved ambiguous_words, classifier_tester, cntraining,
+    combine_lang_model, combine_tessdata, dawg2wordlist,
+    lstmeval, lstmtraining, merge_unicharsets, mftraining,
+    set_unicharset_properties, shapeclustering, text2image,
+    unicharset_extractor, wordlist2dawg to tesseract-training 
+    package (closes: #933878)
   * Bump Standards-Version to 4.4.1
   * URL: git://github.com/tesseract-ocr/tesseract.git
   * Branch: 4.1

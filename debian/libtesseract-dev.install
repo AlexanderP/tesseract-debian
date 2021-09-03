@@ -2,6 +2,3 @@ usr/lib/*/libtesseract.so
 usr/lib/*/*.a
 usr/include/tesseract/*.h
 usr/lib/*/pkgconfig/*
-src/training/tesstrain.sh usr/share/tesseract-ocr/
-src/training/language-specific.sh usr/share/tesseract-ocr/
-src/training/tesstrain_utils.sh usr/share/tesseract-ocr/

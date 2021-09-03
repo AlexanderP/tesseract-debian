@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /usr/share/tesseract-ocr/ || exit 1
+./tesstrain.sh $@

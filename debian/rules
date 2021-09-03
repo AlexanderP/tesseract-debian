@@ -7,6 +7,8 @@ CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 CFLAGS += -Wall -g -fPIC -DTESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00
 
+man_xslt = http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl
+
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
@@ -25,6 +27,8 @@ override_dh_auto_build:
 override_dh_install:
 	cd $(CURDIR)/src/training/ && chmod +x *.sh
 	cd $(CURDIR)/debian/tmp/usr/bin && for i in $$(ls *.sh); do rm -f $${i}; done
+	cd $(CURDIR)/debian && asciidoc -b docbook -d manpage -o - tesstrain.1.asc | \
+	xsltproc --nonet $(man_xslt) -
 	dh_install
 
 override_dh_auto_install:
