@@ -1,11 +1,11 @@
 Upstream user documentation:
 
-   https://github.com/tesseract-ocr/tesseract/wiki
+   https://tesseract-ocr.github.io/
 
 Auto generated API documentation:
 
-   http://tesseract-ocr.github.io/4.x/
+   http://tesseract-ocr.github.io/tessapi/4.x/
 
 Training documentation:
 
-   https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract-4.00
+   https://tesseract-ocr.github.io/tessdoc/tess4/TrainingTesseract-4.00

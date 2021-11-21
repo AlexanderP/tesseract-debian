@@ -2,7 +2,7 @@ Name: tesseract-ocr
 Homepage: https://github.com/tesseract-ocr/
 Bug-Database: https://github.com/tesseract-ocr/tesseract/issues
 Changelog: https://github.com/tesseract-ocr/tesseract/releases
-FAQ: https://github.com/tesseract-ocr/tesseract/wiki/FAQ
+FAQ: https://tesseract-ocr.github.io/tessdoc/FAQ
 Contact: http://groups.google.com/group/tesseract-ocr
 Repository: https://github.com/tesseract-ocr/tesseract.git
 Repository-Browse: https://github.com/tesseract-ocr/tesseract
