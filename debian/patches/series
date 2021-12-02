@@ -1,4 +1,5 @@
 #man.diff
 #fix-up-headers
-#helptext
+helptext
 #shebang.diff
+#no-march-native

@@ -1,12 +1,55 @@
-tesseract (5.0.0~git4328-a3cfd66f-1) unstable; urgency=medium
+tesseract (4.1.3-1) unstable; urgency=medium
 
-  * Compile
+  * New upstream release.
+  * disable patch - no-march-native
+  * update patch - helptext
+  * Bump Standards-Version to 4.5.1
+  * debian/control:
+    - Included Rules-Requires-Root: no
   * URL: git://github.com/tesseract-ocr/tesseract.git
-  * Branch: master
-  * Commit: a3cfd66f37aa76871d1e8d8b4f3d5791a9c373df
-  * Date: 1571118982
+  * Branch: 4.1
+  * Commit: f38e7a7ba850b668d4505dd4c712238d7ec63ca8
+  * Date: 1636966228
+  * git changelog:
+  *  f38e7a7b - Create new release 4.1.3
+  *  28ad3e8b - Fix broken autoconf build
+  *  4a5760dd - Update sw.cpp
+  *  d358270d - Create new release 4.1.2
+  *  4b2b7219 - Don't use compiler flags -march=native -mtune=native in
+    autoconf builds
+  *  9dabb7ad - Fix automake warning because of redefined
+    DEFAULT_INCLUDES
+  *  0d479d52 - Make automake builds less noisy by default
+  *  c1a56cce - Update ChangeLog and prepare new release 4.1.2
+  *  9b688e6e - Update documentation
+  *  15aee49d - Abort LSTM training with integer model (fixes issue
+    #1573)
+  *  ffb71e57 - Extend URI support for Tesseract with libcurl
+  *  b2eb72b6 - Don't output empty ALTO sourceImageInformation (issue
+    #2700)
+  *  4e362bba - Make automake builds less noisy by default
+  *  77108707 - Fix broken build for unittest
+  *  dbc79b09 - Use more compiler and linker flags from pkg-config
+  *  6dc4b184 - Fix autoconf build for latest MacOS (Intel and M1)
+  *  412d8a98 - Adding SVMutex and SVSemaphore destructors to avoid
+    system objects leaks
+  *  3cedf198 - Merge pull request #2971 from poke1024/rowattr
+  *  97079fa3 - Allow line images with larger width (depending on
+    height)
+  *  6c29f9c4 - Allow line images with larger width
+  *  3e74c1eb - Add RowAttributes getter to PageIterator
+  *  bf2129d0 - Update appveyor.yml
+  *  088995df - Fix 3.0x version info
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 19 Jan 2020 09:48:59 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 16 Nov 2021 19:46:19 +0000
+
+tesseract (4.1.1-2.1) unstable; urgency=medium
+
+  [ Peter Green ]
+  * Edit configure.ac to disable -march=native (Closes: #949638)
+  * Edit control/rules to enable autoreconf.
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 04 Feb 2021 21:49:33 +0100
 
 tesseract (4.1.1-2) unstable; urgency=medium
 
