@@ -5,7 +5,7 @@ Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 9), libleptonica-dev (>= 1.75.3),
                automake, libtool, libarchive-dev, libpango1.0-dev, libcairo2-dev, libicu-dev,
                libpng-dev, libjpeg-dev, libtiff-dev, zlib1g-dev, git, asciidoc,
-               xsltproc, docbook-xsl, docbook-xml, tesseract-ocr-eng (>= 5.0.0~), dh-autoreconf
+               xsltproc, docbook-xsl, docbook-xml, tesseract-ocr-eng (>= 5.0.0~), dh-autoreconf, libcurl4-openssl-dev
 Standards-Version: 4.5.1
 Homepage: https://github.com/tesseract-ocr/
 Vcs-Git: https://github.com/AlexanderP/tesseract-debian.git

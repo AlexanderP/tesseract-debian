@@ -1,3 +1,74 @@
+tesseract (5.0.1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/tesseract-ocr/tesseract.git
+  * Branch: main
+  * Commit: 5d5cd77e3dbb03f8e4c06289baa77bb299ab859a
+  * Date: 1641559432
+  * git changelog:
+  *  5d5cd77e - Create new release 5.0.1
+  *  e28154ab - Update documentation for release 5.0.1
+  *  ded61087 - Merge pull request #3712 from stweil/cmake
+  *  5113ed1b - cmake: TIFF is only used for WIN32
+  *  790f3bd1 - Fix build on non-x86 non-ARM with clang
+  *  890cf3ec - Merge pull request #3705 from stweil/cmake
+  *  04a66b91 - Don't use <XXX>_LINK_LIBRARIES for cmake before version
+    3.12
+  *  28f85418 - cmake: reformat with cmake-format
+  *  b8b2ab22 - Simplify cmake check for Pango related modules
+  *  f2af3056 - Update required packages for CI
+  *  a02c80c3 - Merge pull request #3704 from stweil/cmake-fixes
+  *  68a2aea1 - cmake: Add project include paths before others
+  *  c3c734e5 - cmake: Fix check for CURL_LIBRARIES
+  *  e1764e1b - Use cmake policy CMP0074 only with version 3.12 or newer
+  *  a185c068 - Update submodule googletest to release v1.11.0
+  *  6727aae7 - Remove unused include statement
+  *  df227caa - Add function ERRCODE::error with only 2 parameters
+  *  84e6f444 - Fix some compiler warnings (implicit float to double
+    conversion)
+  *  25d25b5e - Remove unused forward declaration
+  *  512587a6 - Merge pull request #3699 from stweil/bugfix
+  *  e8796903 - Remove duplicate parameter certainty_scale
+  *  86158d39 - Merge pull request #3697 from stweil/opt
+  *  d754593a - Catch nullptr in STATS::pile_count (fix isse #3694)
+  *  22e86fa7 - Eliminate function NetworkIO::ZeroTimeStepGeneral
+  *  03e82271 - Fix clang compiler warnings in functions.h
+  *  7277963e - Update generator for lookup tables to use TFloat instead
+    of double
+  *  706d3bac - Fix some clang compiler warnings
+  *  bf7c134b - Merge pull request #3690 from stweil/SPDX
+  *  3ab060ff - Clean header comments in public include files
+  *  5057483e - Add SPDX-License-Identifier to public include files
+  *  7a218f1d - Fix compiler warning [-Wsign-compare]
+  *  34311179 - Allow printing of bitfield with variadic templates
+  *  edf5c91a - Fix compiler warnings caused by empty statements
+  *  a8bdc789 - Replace tprintf comment in API header
+  *  07e319af - Cmake install (#3685)
+  *  f65fae82 - clean up condition to detect MSCV
+  *  771c1e9c - fix lstm.cpp build with clang
+  *  03ae6d09 - cmake: fix bcf7bbb6e23fcd7c081
+  *  bcf7bbb6 - cmake: do not try to even configure training tools if
+    pkg-config is not present.
+  *  8f022552 - cmake: reformat with cmake-format and check with cmake-
+    lint
+  *  b565cfee - cmake: do not try to configure training tools without
+    PkgConfig
+  *  2ee90ffe - cmake: remove unused code
+  *  5fd8bfb5 - CMake: Also check x86_64 and i686
+  *  82f510fe - cmake: fix fb74c7eac1292fca6221d66ed4428d3a031e99dd
+  *  5652210c - Merge pull request #3681 from stweil/curl
+  *  f728df0c - Support up to 8 redirections when running OCR on a URL
+  *  1e1a8f69 - Update README.md
+  *  ec242e99 - Update unittest-disablelegacy.yml
+  *  cc1cc707 - Update vcpkg-4.1.1.yml
+  *  d37dd734 - Fix broken msys2 build with gcc 11
+  *  9508530a - Update unittest-disablelegacy.yml
+  *  c5401026 - Merge pull request #3669 from pkubaj/patch-1
+  *  fb74c7ea - Correctly detect amd64 and i386 on FreeBSD
+  *  4abb0e08 - README: Latest stable version is 5.0.0
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 07 Jan 2022 14:48:31 +0000
+
 tesseract (5.0.0-1) unstable; urgency=medium
 
   * New upstream release.
