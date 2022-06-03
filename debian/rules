@@ -35,7 +35,14 @@ endif
 override_dh_auto_clean:
 	dh_auto_clean
 	dh_clean java/com/Makefile java/com/google/Makefile java/com/google/scrollview/Makefile java/com/google/scrollview/events/Makefile java/com/google/scrollview/ui/Makefile
+	test ! -f configure.ac.orig || mv configure.ac.orig configure.ac
 
 override_dh_auto_configure:
+ifeq ($(DEB_BUILD_GNU_TYPE),arm-linux-gnueabi)
+	cp configure.ac configure.ac.orig
+	patch -p1 < debian/patches/disable_NEON.diff
+else
+	echo "no patch"
+endif
 	./autogen.sh
 	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --disable-tessdata-prefix --prefix=/usr --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CXXFLAGS="$(CFLAGS)" LDFLAGS="-llept -Wl,-z,defs $(LDFLAGS)"

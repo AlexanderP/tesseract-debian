@@ -1,0 +1,18 @@
+Description: disable NEON instructions for architecture armel
+Author: Alexander Pozdnyakov <almipo@mail.ru>
+Last-Update: 2022-06-02
+
+--- tesseract-5.1.0.orig/configure.ac
++++ tesseract-5.1.0/configure.ac
+@@ -170,6 +170,11 @@ case "${host_cpu}" in
+     AC_DEFINE([HAVE_NEON], [1], [Enable NEON instructions])
+     ;;
+ 
++  arm)
++
++    AC_MSG_WARN([No compiler options for $host_cpu])
++    ;;
++
+   arm*)
+ 
+     AX_CHECK_COMPILE_FLAG([-mfpu=neon], [neon=true], [neon=false], [$WERROR])
