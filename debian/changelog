@@ -1,3 +1,14 @@
+tesseract (5.2.0-1) unstable; urgency=medium
+
+  * Bump debhelper version to 11
+  * update patch - disable_NEON
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: main
+  * Commit: 5ad5325a0aa8effc47ca033625b6a51682f82767
+  * Date: 1657138549
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Sep 2022 21:07:15 +0300
+
 tesseract (5.1.0-2) unstable; urgency=medium
 
   * Update debian/control:
