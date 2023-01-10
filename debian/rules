@@ -29,7 +29,7 @@ override_dh_auto_install:
 override_dh_auto_test:
 ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	./tesseract -v
-	./tesseract ./test/testing/phototest.tif -
+	./tesseract ./debian/test_image.tif -
 endif
 
 override_dh_auto_clean:
