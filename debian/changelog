@@ -2,9 +2,16 @@ tesseract (5.3.0-2) unstable; urgency=medium
 
   * Bump debhelper version to 11
   * Update patch - disable_NEON
-  * Update debian/rules
+  * Reduce Build-Depends: (Closes: #980991)
+    - Drop unused libjpeg-dev and libtiff-dev dependencies. tesseract does not
+      use these directly. It only uses them via leptonica.
+    - Drop dependency on git. The source does not include git history.
+  * Update debian/control:
+    -  Drop the Vcs-* fields
+  * Update debian/rules:
+    - Drop --parallel because this is included in the new debhelper level
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 09 Jan 2023 19:45:54 +0000
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 11 Jan 2023 23:20:26 +0300
 
 tesseract (5.3.0-1) unstable; urgency=medium
 

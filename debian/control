@@ -8,8 +8,6 @@ Build-Depends: debhelper-compat (= 11), libleptonica-dev (>= 1.75.3),
                xsltproc, docbook-xsl, docbook-xml, tesseract-ocr-eng (>= 5.0.0~), dh-autoreconf, autoconf-archive, libcurl4-openssl-dev
 Standards-Version: 4.5.1
 Homepage: https://github.com/tesseract-ocr/
-Vcs-Git: https://github.com/AlexanderP/tesseract-debian.git
-Vcs-Browser: https://github.com/AlexanderP/tesseract-debian
 Rules-Requires-Root: no
 
 Package: tesseract-ocr
