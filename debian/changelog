@@ -1,3 +1,15 @@
+tesseract (5.3.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update debian/control:
+    -  Drop build dependency on dh-autoreconf
+  * Update patch - disable_NEON
+  * Update debian/copyright:
+    -  Updated year
+  * Bump debhelper version to 12
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 29 Nov 2023 14:36:56 +0300
+
 tesseract (5.3.0-2) unstable; urgency=medium
 
   * Bump debhelper version to 11
