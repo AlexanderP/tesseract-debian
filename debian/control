@@ -1,4 +1,4 @@
-Source: tesseract
+Source: tesseract-lept5
 Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
