@@ -45,7 +45,4 @@ else
 	echo "no patch"
 endif
 	./autogen.sh
-	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --disable-tessdata-prefix --prefix=/usr --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CXXFLAGS="$(CFLAGS)" LDFLAGS="-llept -Wl,-z,defs $(LDFLAGS)"
-
-override_dh_builddeb:
-	dh_builddeb -- -Zxz -z9
+	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --disable-tessdata-prefix --prefix=/usr --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CXXFLAGS="$(CFLAGS)" LDFLAGS="-lleptonica -Wl,-z,defs $(LDFLAGS)"
