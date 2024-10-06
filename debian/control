@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper-compat (= 12), libleptonica-dev (>= 1.75.3),
                automake, libtool, libarchive-dev, libpango1.0-dev, libcairo2-dev, libicu-dev,
-               libpng-dev, libjpeg-dev, libtiff-dev, zlib1g-dev, git, asciidoc,
+               libpng-dev, zlib1g-dev, asciidoc,
                xsltproc, docbook-xsl, docbook-xml, tesseract-ocr-eng (>= 5.0.0~), autoconf-archive, libcurl4-openssl-dev
 Standards-Version: 4.5.1
 Homepage: https://github.com/tesseract-ocr/

@@ -5,13 +5,13 @@ Source: https://github.com/tesseract-ocr/
 
 Files: *
 Copyright: 1988-1995 Hewlett Packard Company.
-           2006-2023 Google Inc.
+           2006-2024 Google Inc.
 License: Apache-2.0
 
 Files: debian/*
 Copyright: 2007-2009 Jeffrey Ratcliffe <Jeffrey.Ratcliffe@gmail.com>
            2010-2019 Jeff Breidenbach <jab@debian.org>
-           2010-2023 Alexander Pozdnyakov <almipo@mail.ru>
+           2010-2024 Alexander Pozdnyakov <almipo@mail.ru>
 License: Apache-2.0
 
 License: Apache-2.0
