@@ -1,0 +1,37 @@
+Description: disable NEON instructions for architecture armel
+ .
+ tesseract (5.1.0-2) unstable; urgency=medium
+ .
+  * Update debian/control:
+    - add dependency 'libcurl4-dev | libcurl4-gnutls-dev' for
+      libtesseract-dev (closes: #1012242)
+    - update dependency for tesseract-ocr
+    - update 'breaks' for libtesseract5
+  * disable NEON instructions for architecture armel (closes: #1012254)
+Author: Alexander Pozdnyakov <almipo@mail.ru>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: vendor, N/A
+Bug: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1012254
+Forwarded: no
+Reviewed-By: Alexander Pozdnyakov <almipo@mail.ru>
+Last-Update: 2025-01-20
+
+--- tesseract-5.2.0.orig/configure.ac
++++ tesseract-5.2.0/configure.ac
+@@ -170,6 +170,11 @@
+ 
+     ;;
+ 
++  arm)
++
++    AC_MSG_WARN([No compiler options for $host_cpu])
++    ;;
++    
+   aarch64*|arm64)
+ 
+     # ARMv8 always has NEON and does not need special compiler flags.

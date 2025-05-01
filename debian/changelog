@@ -1,9 +1,23 @@
 tesseract-lept5 (5.5.0-1) unstable; urgency=medium
 
   * New upstream release
-  * update patch - helptext
+  * Update patch and rename - helptext
+  * Update patch and rename - disable_NEON
+  * Update debian/copyright:
+    - Updated year
+    - Added licenses for nsis/find_deps.py
+    - Added licenses for test/*
+  * Bump debhelper version to 13:
+    - Added debian/not-installed
+  * Bump Standards-Version to 4.7.0
+  * Update debian/rules:
+    - update - override_dh_auto_clean
+  * Update debian/control:
+    - Replacing the libcurl4-dev virtual
+      package with libcurl4-openssl-dev
+  * Fix build vs host confusion (Closes: #1088908).
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 11 Nov 2024 09:46:57 +0000
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 19 Jan 2025 13:53:37 +0300
 
 tesseract (5.3.4-1.4) unstable; urgency=medium
 

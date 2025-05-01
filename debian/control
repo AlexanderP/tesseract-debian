@@ -2,11 +2,11 @@ Source: tesseract-lept5
 Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper-compat (= 12), libleptonica-dev (>= 1.75.3),
+Build-Depends: debhelper-compat (= 13), libleptonica-dev (>= 1.75.3),
                automake, libtool, libarchive-dev, libpango1.0-dev, libcairo2-dev, libicu-dev,
                libpng-dev, zlib1g-dev, asciidoc,
                xsltproc, docbook-xsl, docbook-xml, tesseract-ocr-eng (>= 5.0.0~), autoconf-archive, libcurl4-openssl-dev
-Standards-Version: 4.5.1
+Standards-Version: 4.7.0
 Homepage: https://github.com/tesseract-ocr/
 Rules-Requires-Root: no
 
@@ -25,7 +25,7 @@ Package: libtesseract-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libtesseract5 (= ${binary:Version}), ${misc:Depends}, libleptonica-dev, libarchive-dev, libcurl4-dev | libcurl4-gnutls-dev
+Depends: libtesseract5 (= ${binary:Version}), ${misc:Depends}, libleptonica-dev, libarchive-dev, libcurl4-openssl-dev | libcurl4-gnutls-dev
 Replaces: tesseract-ocr-dev (<< 3.0.1-1~)
 Breaks: tesseract-ocr-dev (<< 3.0.1-1~)
 Description: Development files for the tesseract command line OCR tool

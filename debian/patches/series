@@ -1,5 +1,2 @@
-#man.diff
-#fix-up-headers
-helptext
-#shebang.diff
-#no-march-native
+0001_helptext
+# 0002_disable_NEON.diff
