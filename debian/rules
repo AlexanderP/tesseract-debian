@@ -3,8 +3,7 @@
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
-CFLAGS:=$(shell dpkg-buildflags --get CFLAGS | sed 's/-Werror=format-security//g')
-#CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 CFLAGS += -Wall -g -fPIC -DTESSDATA_PREFIX='\"/usr/share/tesseract-ocr/5\"'
 
